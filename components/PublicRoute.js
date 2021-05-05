@@ -6,7 +6,7 @@ export const PublicRoute = ({ component: Component, restricted, ...rest }) => {
   return (
     <Route
       {...rest}
-      render={(props) => (getUserData() && restricted ? <Redirect to="/" /> : <Component {...props} />)}
+      render={(props) => (getUserData() && restricted ? <Redirect to="/Mobile" /> : <Component {...props} />)}
     />
   );
 };
