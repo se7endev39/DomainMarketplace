@@ -1,0 +1,746 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/fonts/Karla-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/fonts/Karla-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+body {
+  /* @apply bg-blue-500 p-12; */
+  font-family: "Karla";
+  background: #3aa0c0;
+  color: white;
+  font-size: 12px;
+}
+
+button {
+  font-family: "Karla";
+}
+
+/* Common */
+.color-primary {
+  color: #3aa0c0;
+}
+.bg-primary {
+  background: #3aa0c0;
+}
+.bg-secondary {
+  background: rgba(58, 160, 192, 0.13);
+}
+.font-default {
+  font-family: "Karla";
+}
+.font-primary {
+  font-family: "Montserrat";
+}
+.text-color-primary {
+  color: #00293d;
+}
+.text-color-secondary {
+  color: #003853;
+}
+.text-color-third {
+  color: #3aa0c0;
+}
+.sc-font-50 {
+  font-size: 50px;
+}
+.sc-font-30 {
+  font-size: 30px;
+}
+.sc-font-26 {
+  font-size: 26px;
+}
+.sc-font-22 {
+  font-size: 22px;
+}
+.sc-font-lg {
+  font-size: 16px;
+}
+.sc-font-12 {
+  font-size: 12px;
+}
+.sc-lineheight-38 {
+  line-height: 38px;
+}
+.sc-lineheight-123 {
+  line-height: 123%;
+}
+.sc-lineheight-129 {
+  line-height: 129%;
+}
+.sc-lineheight-145 {
+  line-height: 145%;
+}
+.sc-lineheight-155 {
+  line-height: 155%;
+}
+.sc-break-words {
+  word-break: break-word;
+}
+.hover-shadow:hover {
+  box-shadow: 0px 5px 10px #666;
+}
+.border-3 {
+  border: 3px solid #3aa0c0;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background: inherit;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.page-container {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.sc-btn {
+  font-size: 18px;
+  height: 49px;
+}
+.sc-btn-sm {
+  height: 43px;
+}
+
+.hover-link-shadow:hover {
+  text-shadow: 0px 1px 5px black;
+}
+
+/* Modal */
+
+.sc-modal-bg {
+  background: rgba(196, 196, 196, 0.2);
+}
+.sc-modal-content {
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+.sc-modal-title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color: #00293d;
+}
+.sc-modal-title-addition {
+  font-size: 50px;
+  line-height: 58px;
+  color: #3aa0c0;
+}
+
+.citation-modal-content {
+  width: 900px;
+  padding: 50px 38px 50px 44px;
+}
+.modal-edit-form {
+  width: 669px;
+}
+
+/* Top Nav */
+
+.top-nav {
+  padding: 39px 41px 29px 39px;
+}
+.top-nav img {
+  width: 180px;
+  height: 48px;
+}
+
+.nav-link {
+  font-size: 18px;
+  line-height: 21px;
+  margin-left: 34px;
+}
+
+.nav-register {
+  width: 124px;
+  height: 43px;
+  font-size: 18px;
+  line-height: 140.4%;
+}
+.nav-login {
+  width: 99px;
+  height: 43px;
+  font-size: 18px;
+  line-height: 140.4%;
+  border: 3px solid #fff;
+  margin-left: 10px;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  height: 80px;
+}
+
+/* Topic Item */
+
+.topic-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #00293d;
+  font-size: 16px;
+  line-height: 155%;
+  background: #e2f1f6;
+  /* height: 46px; */
+  margin-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+}
+.topic-item .float-menu {
+  height: 42px;
+  background: #f3f3f3;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  padding: 0 15px;
+  top: -52px;
+}
+
+.topic-share-icon {
+  margin-left: 6px;
+  /* margin-right: 25px; */
+}
+
+.topic-add-citation {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.citation-item {
+  border-bottom: 1px solid #000;
+}
+.citation-item img {
+  width: 106px;
+  height: 112px;
+  object-fit: cover;
+}
+.citation-item:hover .edit-icon {
+  display: block;
+}
+.citation-item .citation-title {
+  font-size: 16px;
+}
+.citation-item .citation-desc {
+  font-size: 12px;
+}
+
+/* Index page */
+
+.index-title {
+  font-weight: bold;
+  font-size: 105px;
+  line-height: 110%;
+  text-align: center;
+}
+.index-subtitle {
+  font-size: 26px;
+  line-height: 153%;
+  text-align: center;
+  max-width: 820px;
+}
+.index-search {
+  max-width: 500px;
+  /* height: 43px; */
+  font-size: 16px;
+  line-height: 0%;
+}
+.index-search.nav-search {
+  width: 410px;
+  margin-right: 30px;
+}
+.index-search input {
+  height: 43px;
+}
+.index-search button {
+  /* width: 21px;
+  height: 21px; */
+  margin-top: 11px;
+}
+
+.index-topics {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 155%;
+  /* margin-right: 212; */
+  color: #00293d;
+  margin-top: 52px;
+}
+.index-topics-title {
+  font-size: 25px;
+  line-height: 29px;
+}
+
+/* Login */
+
+.login-container {
+  /* height: calc(100vh - 122px); */
+  background: white;
+}
+
+.login-section {
+}
+.login-form {
+  width: 402px;
+}
+.auth-form-title {
+  font-size: 50px;
+}
+.auth-form-subtitle {
+  font-size: 37px;
+}
+.auth-form-text {
+  line-height: 21px;
+}
+.input-form input {
+  background: #ededed;
+  border-radius: 5px;
+  height: 43px;
+  font-size: 16px;
+  color: #003853;
+}
+.input-form textarea {
+  background: #ededed;
+  border-radius: 5px;
+  height: 43px;
+  font-size: 16px;
+  color: #003853;
+  padding-top: 8px;
+  height: 70px;
+}
+
+.login-form input.input-error {
+  background: rgba(197, 40, 61, 0.17);
+}
+
+.input-label {
+  left: 2px;
+  top: -24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #003853;
+}
+.auth-transition {
+  transition: all ease-in-out 0.5s;
+}
+.input-error-indicator {
+  color: #c5283d;
+  font-size: 14px;
+  top: -24px;
+}
+.login-form-button {
+  font-size: 22px;
+  width: 115px;
+  height: 49px;
+}
+.register-form-button {
+  font-size: 22px;
+  width: 139px;
+  height: 49px;
+}
+.login-form-forgot-pswd {
+  font-size: 22px;
+}
+.login-hover-section {
+  background: rgba(58, 160, 192, 0.13);
+  font-size: 50px;
+  line-height: 128.5%;
+}
+.login-hover-section:hover {
+  background: rgba(58, 160, 192, 0.5);
+  color: white;
+}
+.auth-footer {
+  height: 80px;
+}
+
+/* Registration */
+
+.register-field-guide {
+  right: -370px;
+  width: 360px;
+  line-height: normal;
+}
+
+/* MySourcer page */
+
+.mys-container {
+  padding-top: 84px;
+  /* padding-bottom: 100px; */
+}
+
+.topic-search {
+  font-size: 16px;
+  line-height: 0%;
+  max-width: 300px;
+  width: 100%;
+  height: 29px;
+  border-bottom: 1px solid #3aa0c0;
+}
+
+.topic-search ::placeholder {
+  color: #3aa0c0 !important;
+}
+
+.mys-section {
+  width: 603px;
+}
+.mys-section-header {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+}
+.mys-section-add-topic {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* Search page */
+
+.search-container {
+  width: 826px;
+}
+
+/* Contact page */
+
+.search-topic-button {
+  width: 196px;
+  height: 49px;
+}
+
+/* Topic page */
+
+.topic-back {
+  top: 47px;
+  left: 50px;
+}
+
+/* About page */
+
+.about-content {
+  width: 500px;
+}
+.about-guide {
+  width: 278px;
+}
+/* Contribute page */
+
+@media (min-width: 1440px) {
+  .topic-item .edit-icon {
+    display: none;
+  }
+  .topic-item:hover .edit-icon {
+    display: inline;
+  }
+  .citation-item .edit-icon {
+    display: none;
+  }
+  .contribute-guide {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1439px) {
+  /* .top-nav {
+    padding: 23px 30px;
+  } */
+
+  .nav-logo {
+    font-size: 35px;
+    line-height: 41px;
+  }
+  .nav-logo span {
+    font-size: 12.5px;
+    line-height: 15px;
+  }
+
+  .nav-link {
+    margin: 0 29px;
+  }
+
+  .index-subtitle,
+  .index-topics {
+    max-width: 593px;
+  }
+  .page-container {
+    padding-bottom: 80px;
+  }
+  .mys-container {
+    padding-top: 0;
+  }
+
+  .mys-section {
+    margin-top: 60px;
+  }
+}
+@media (min-width: 1080px) {
+  .nav-home {
+    display: flex;
+  }
+  .nav-home-bottom {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .index-topics {
+    max-width: 820px;
+  }
+}
+
+@media (max-width: 946px) {
+  .top-nav {
+    padding: 30px;
+  }
+  .index-search.nav-search {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+  .login-hover-section {
+    font-size: 30px;
+  }
+  .auth-footer {
+    bottom: 80px;
+  }
+  .citation-modal-content {
+    width: 759px;
+    padding: 50px 46px 50px 44px;
+  }
+  .search-container {
+    width: 603px;
+  }
+  .topic-back {
+    top: 34px;
+    left: 43px;
+  }
+}
+
+@media (max-width: 874px) {
+  .about-content {
+    width: 90%;
+  }
+  .about-guide {
+    width: 90%;
+  }
+}
+
+@media (max-width: 834px) {
+  .top-nav {
+    padding: 20px;
+    height: auto;
+  }
+  .top-nav img {
+    width: 143px;
+    height: 38px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0 12px;
+  }
+
+  .nav-logo {
+    font-size: 25px;
+    line-height: 29px;
+  }
+  .nav-logo span {
+    font-size: 9px;
+    line-height: 11px;
+  }
+  .nav-register {
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+  }
+  .nav-login {
+    width: 84px;
+    height: 35px;
+    font-size: 12px;
+  }
+  .citation-modal-content {
+    width: 100%;
+    padding: 37px 8px 37px 8px;
+  }
+  .modal-edit-form {
+    width: 100%;
+  }
+  .sc-modal-title-addition {
+    font-size: 30px;
+  }
+  .auth-form-title {
+    font-size: 35px;
+  }
+  .auth-form-subtitle {
+    font-size: 25px;
+  }
+  .login-form-button {
+    font-size: 18px;
+  }
+  .register-form-button {
+    font-size: 18px;
+  }
+  .login-form-forgot-pswd {
+    font-size: 18px;
+  }
+  .login-hover-section {
+    font-size: 20px;
+  }
+  .auth-footer {
+    bottom: 55px;
+    height: 60px;
+  }
+  .bottom-nav {
+    height: 55px;
+  }
+
+  .index-title {
+    font-size: 65px;
+  }
+  .index-subtitle {
+    font-size: 16px;
+    max-width: 357px;
+  }
+  .index-search {
+    font-size: 14px;
+    max-width: 384px;
+    width: 100% !important;
+  }
+  .index-topics {
+    max-width: 357px;
+  }
+  .index-topics-title {
+    font-size: 19px;
+    line-height: 22px;
+  }
+
+  .page-container {
+    padding-bottom: 60px;
+  }
+  .mys-section {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    max-width: 603px;
+    width: 100%;
+    padding: 0 16px;
+  }
+  .search-container {
+    width: 383px;
+  }
+  .topic-back {
+    top: 18px;
+    left: 21px;
+  }
+  .contribute-guide {
+    font-size: 30px;
+    line-height: 129%;
+  }
+}
+
+@media (max-width: 414px) {
+  .top-nav img {
+    width: 110px;
+    height: 32px;
+  }
+  .nav-login {
+    width: 71px;
+    height: 28px;
+    font-size: 10px;
+  }
+  .nav-register {
+    width: 77px;
+    height: 27px;
+    font-size: 10px;
+  }
+  .nav-link {
+    font-size: 11px;
+  }
+  /* .index-search {
+    font-size: 10px;
+  }
+  .index-search input {
+    height: 33px;
+  } */
+
+  .auth-transition {
+    transition: none;
+  }
+  .login-form-forgot-pswd {
+    font-size: 16px;
+  }
+  .citation-item img {
+    width: 82px;
+    height: 87px;
+  }
+  .citation-item .citation-title {
+    font-size: 12px;
+  }
+  .citation-item .citation-desc {
+    font-size: 9px;
+  }
+  .search-container {
+    width: 301px;
+  }
+  .topic-back {
+    top: 17px;
+    left: 14px;
+  }
+}
+/* @media (max-width: 320px) {
+  .search-container {
+    width: 300px;
+  }
+} */

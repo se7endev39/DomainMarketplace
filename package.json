@@ -1,0 +1,41 @@
+{
+  "name": "sourcer-ui-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "autoprefixer": "^10.0.1",
+    "axios": "^0.20.0",
+    "history": "^5.0.0",
+    "lodash": "^4.17.20",
+    "next": "^9.5.5",
+    "next-images": "^1.6.0",
+    "next-redux-wrapper": "^6.0.2",
+    "query-string": "^6.13.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-google-recaptcha": "^2.1.0",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.9.1"
+  }
+}
