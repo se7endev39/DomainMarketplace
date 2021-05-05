@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './index.module.css';
-import classNames from 'classnames'
-import { Divider, Button } from 'rsuite';
+import {MDBBtn} from 'mdbreact'
 
 function Mobile() {
     return (
@@ -12,9 +11,9 @@ function Mobile() {
                 <div className="pl-4 m-auto lg:m-0">
                 A powerful story can change the world.
                 </div>
-                <Button color="blue" appearance="ghost">
-                    Explore Stories
-                </Button>
+                <MDBBtn color="elegant" className="black_btn" style={{marginLeft: 20, marginTop: 18}}>
+                    explore stories
+                </MDBBtn>
             </div>
         </div>
     );

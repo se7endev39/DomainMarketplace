@@ -1,9 +1,24 @@
 body{
     /* background: #CED3E3; */
+    font-family: Neuzeit Grotesk;
 }
 
 .divider{
     margin-left: 20px;
     margin-right: 20px;
     border-top: 1px solid #1E2023
+}
+
+.black_btn{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    border-radius: 10px !important;
+}
+
+.btn{
+    text-transform: initial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.04em;
 }

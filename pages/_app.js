@@ -1,4 +1,5 @@
 import React, { Component, useEffect } from 'react';
+import 'mdbreact/dist/css/mdb.css'
 import '../styles/index.css'
 import '../styles/global.css'
 import '../assets/fonts/fonts.css'
