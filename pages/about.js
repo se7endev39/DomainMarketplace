@@ -4,7 +4,6 @@ import Link from 'next/link';
 function About() {
     return (
         <div className="flex bg-white flex-grow items-center 2xl:p-0 pb-20 lg:flex-row lg:flex-row-reverse flex-col">
-
             <div className="lg:w-1/3 color-primary sc-font-30 font-bold sc-lineheight-123 text-center lg:text-left mt-8 lg:mt-0">
                 <div className="about-guide m-auto lg:m-0">
                     Sourcer is a site to help manage sources of information. We make it easy to find,

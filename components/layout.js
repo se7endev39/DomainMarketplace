@@ -21,6 +21,7 @@ function Layout(props) {
   return (
     <div className='flex flex-col h-screen'>
       <Nav noSearch={!shouldHaveSearch} />
+      <div className="divider"></div>
       {alert.message && <Alert alert={alert} />}
       {children}
       <BottomNav />

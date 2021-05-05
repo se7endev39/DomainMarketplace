@@ -1,10 +1,13 @@
 import React, { Component, useEffect } from 'react';
 import '../styles/index.css'
+import '../styles/global.css'
+import '../assets/fonts/fonts.css'
 import { store, wrapper } from "../utils/store";
 import Layout from "../components/layout";
 import { alertActions, citationActions, topicActions } from "../_actions";
 import { useDispatch, useSelector } from "react-redux";
 import Head from 'next/head';
+// import 'rsuite/lib/styles';
 // import { config } from '@fortawesome/fontawesome-svg-core'
 // import '@fortawesome/fontawesome-svg-core/styles.css' // Import the CSS
 // config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above

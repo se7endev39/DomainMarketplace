@@ -1,0 +1,23 @@
+/* A powerful story can change the world. */
+.slogan{
+    margin-top: 34px;
+    
+    /* H1 - Mobile */
+    font-family: Neuzeit Grotesk;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 115%;
+    /* or 52px */
+    color: #1E2023;
+}
+
+.screen1{
+    position: absolute;
+    height: 889px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background: #CED3E3;
+    z-index: -1;
+}
