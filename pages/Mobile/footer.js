@@ -4,7 +4,7 @@ import {MDBBtn, MDBIcon} from 'mdbreact'
 const title = "DearMusicIn TheMaking"
 const stories = 123
 
-function FeaturedGroup() {
+function Footer() {
     return (
         <div className="pb-4 px-4">
             <div className="py-3" style={{fontSize: 18, fontWeight: "bold"}}>
@@ -22,10 +22,9 @@ function FeaturedGroup() {
             <div className="featured_group_detail">
 
             </div>
-            <div className="divider"></div>
 
         </div>
     )
 }
 
-export default FeaturedGroup;
+export default Footer;
