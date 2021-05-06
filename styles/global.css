@@ -1,7 +1,7 @@
 body{
     /* background: #CED3E3; */
     font-family: Neuzeit Grotesk;
-    background: white;
+    background: #E5E5E5;
 }
 
 .divider{
@@ -22,4 +22,20 @@ body{
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.04em;
+}
+
+/*****  page1/satistics *******/
+.statistics_item{
+    min-width: 150px;
+    text-align: center;
+    align-items: center;
+}
+
+.statistics_item .number{
+    font-size: 28px;
+}
+
+.statistics_item .description{
+    font-size: 18px;    
+    line-height: 18px;
 }
