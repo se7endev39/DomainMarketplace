@@ -36,7 +36,7 @@ const MyApp = (props) => {
           content="Sourcer lets you Search, Compile and Share all the sources you need to back up a position.  Share the facts and fight misinformation!"
         />
 
-        <meta property="og:title" content="Sourcer: Make your case!" />
+        <meta property="og:title" content="" />
         <meta property="og:url" content="https://dev.sourcer.com" />
         <meta
           property="og:description"
@@ -48,7 +48,7 @@ const MyApp = (props) => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpg" />
-        <title>Sourcer: Make your case!</title>
+        <title></title>
       </Head>
       <Component {...pageProps} />
     </Layout>
