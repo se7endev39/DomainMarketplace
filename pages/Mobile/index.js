@@ -6,6 +6,7 @@ import ImageCollection from './imageCollection';
 import Verizon from './Verizon';
 import Statistics from './statistics'
 import SearchGroup from './searchGroup';
+import FeaturedGroup from './featuredGroup'
 
 const images = [
     {
@@ -49,11 +50,11 @@ function Mobile() {
     return (
         <div className="flex flex-grow 2xl:p-0 pb-6 lg:flex-row flex-col">
             <div className={styles.screen1}></div>
-            <div className={styles.slogan}>
-                <div className="pl-4 m-auto lg:m-0">
-                A powerful story can change the world.
+            <div className="mt-8">
+                <div className={"pl-4 m-auto lg:m-0 " + styles.slogan}>
+                    A powerful story can change the world.
                 </div>
-                <MDBBtn color="elegant" className="black_btn" style={{marginLeft: 20, marginTop: 18}}>
+                <MDBBtn color="elegant" className="btn-radius-10 ml-5 mt-4">
                     explore stories
                 </MDBBtn>
             </div>
@@ -63,6 +64,7 @@ function Mobile() {
             <Verizon />
             <Statistics statistics={statistics} />
             <SearchGroup />
+            <FeaturedGroup />
         </div>
     );
 }

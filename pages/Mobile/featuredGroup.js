@@ -2,6 +2,7 @@ import React from 'react';
 import search_icon from "../../assets/images/search.svg";
 import down_icon from "../../assets/images/down.svg";
 import {MDBBtn, MDBIcon} from 'mdbreact'
+import { each } from 'lodash';
 
 function SearchBar() {
     return (
@@ -27,7 +28,7 @@ function Filter() {
     )
 }
 
-function SearchItem({src, comment, stories}) {
+function ImageItem({src, comment, stories}) {
     return (
         <div className="m-auto pb-4" style={{width: "90%"}}>
             <img src={src} className="search_item_img" />
@@ -77,22 +78,33 @@ function SearchResult() {
         <div className="pt-4">
             {
                 results?.map( each => (
-                    <SearchItem {...each} />
+                    <ImageItem {...each} />
                 ) )
             }
         </div>
     )
 }
 
-function SearchGroup() {
+const title = "DearMusicIn TheMaking"
+const stories = 123
+
+function FeaturedGroup() {
     return (
-        <div className="pb-4">
-            <SearchBar />
-            <Filter />
-            <SearchResult />
-            <div className="divider mt-6" style={{borderColor:"#7C7D83"}}></div>
+        <div className="pb-4 px-4">
+            <div className="py-3" style={{fontSize: 18, fontWeight: "bold"}}>
+                FEATURED GROUP
+            </div>
+            <div className="featured_group_title">
+                #{title}
+            </div>
+            <div>
+                {stories} Stories Told
+            </div>
+            <MDBBtn color="elegant" className="btn-radius-10" style={{marginLeft: 20, marginTop: 18}}>
+                group stories
+            </MDBBtn>
         </div>
     )
 }
 
-export default SearchGroup;
+export default FeaturedGroup;

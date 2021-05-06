@@ -10,9 +10,7 @@ body{
     border-top: 1px solid #1E2023
 }
 
-.black_btn{
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
+.btn-radius-10{
     border-radius: 10px !important;
 }
 
@@ -79,4 +77,10 @@ body{
     font-size: 16px;
     flex-shrink: 0;
     padding-left: 1rem;
+}
+
+.featured_group_title{
+    font-family: Mulish Italic;
+    font-size: 42px;
+    line-height: 42px;
 }
