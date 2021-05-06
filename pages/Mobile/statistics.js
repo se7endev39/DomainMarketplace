@@ -4,7 +4,7 @@ import icon_hands from "../../assets/images/page1/hands.svg";
 
 function Statistics({statistics}) {
     return (
-        <div className="px-8 mx-auto flex">
+        <div className="px-8 pb-10 mx-auto flex">
             <div className="statistics_item">
                 <img src={icon_users} className="mx-auto pb-1"/>
                 <div className="number">{statistics["Stories_Told"].toLocaleString('en')}</div>

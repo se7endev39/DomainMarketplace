@@ -5,6 +5,7 @@ import {MDBBtn} from 'mdbreact'
 import ImageCollection from './imageCollection';
 import Verizon from './Verizon';
 import Statistics from './statistics'
+import SearchGroup from './searchGroup';
 
 const images = [
     {
@@ -61,6 +62,7 @@ function Mobile() {
             />
             <Verizon />
             <Statistics statistics={statistics} />
+            <SearchGroup />
         </div>
     );
 }

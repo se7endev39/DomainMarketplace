@@ -39,3 +39,44 @@ body{
     font-size: 18px;    
     line-height: 18px;
 }
+
+.searchbar .searchtext{
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #1E2023;
+}
+
+
+/******  page1/searchgroup  *****/
+
+.btn_view_all{
+    border-radius: 48px;
+    height: 40px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    background: #1E2023;
+}
+
+.down_icon{
+    width: 16px;
+    height: 8px;
+    display: inline-block;
+}
+
+.search_item_img{
+    margin: auto;
+    border-radius: 9px;
+}
+
+.search_item_comment{
+    font-size: 16px;
+    font-style: italic;
+}
+
+.search_item_stories{
+    font-size: 16px;
+    flex-shrink: 0;
+    padding-left: 1rem;
+}
