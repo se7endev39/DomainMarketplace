@@ -7,7 +7,9 @@ const Footer = () => {
     //     <div className={styles.footer__inner}>Hello! I'm footer!</div>
     //   </div>
     // </footer>
-    <div></div>
+    <div>
+      
+    </div>
   );
 };
 

@@ -23,7 +23,7 @@ export const Nav = (props) => {
       <nav className="flex-wrap top-nav px-1 py-1">
         <div className="flex items-start xl:items-center justify-between ">
           <div className="flex items-start justify-start">
-            <MDBBtn floating style={{borderRadius: "50%"}} className={styles.hamburger}>
+            <MDBBtn floating style={{borderRadius: "50%"}} className={styles.hamburger} outline color="primary">
               <MDBIcon icon="bars" />
             </MDBBtn>
           </div>
