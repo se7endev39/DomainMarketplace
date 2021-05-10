@@ -1,7 +1,10 @@
 .search{
   align-items: center;
   &_icon{
-    color: grey;
     font-size: 18px;
+  }
+  &_input{
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
   }
 }

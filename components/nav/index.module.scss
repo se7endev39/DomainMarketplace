@@ -5,8 +5,11 @@
 .hamburger{
   width: 50px;
   padding: .84rem .84rem;
+  background-color: transparent !important;
 }
 
 .header{
   box-shadow: 0 4px 12px 0 rgb(20 42 128 / 14%);
+  color: var(--color-header-text);
+  background-color: var(--color-header-bg);
 }

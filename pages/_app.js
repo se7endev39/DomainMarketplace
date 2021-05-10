@@ -3,9 +3,10 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css'
 
-import '../styles/index.css'
-import '../styles/global.css'
-import '../assets/fonts/fonts.css'
+// import '../styles/index.css'
+// import '../styles/global.css'
+import 'scss/colors.scss'
+import 'scss/_global.scss'
 import { store, wrapper } from "../utils/store";
 import Layout from "../components/layout";
 import { alertActions, citationActions, topicActions } from "../_actions";

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Link from 'next/link';
-import { NAV_LINK_CLASS } from "../../utils/constants";
 import SearchBox from "../nav-search";
-import Logo from "assets/images/logo.svg";
 import styles from './index.module.scss';
 import {MDBBtn, MDBIcon} from 'mdbreact'
 
@@ -23,15 +20,12 @@ export const Nav = (props) => {
 
   return (
     <header className={styles.header}>
-      <nav className="flex-wrap top-nav bg-white px-1 py-1">
+      <nav className="flex-wrap top-nav px-1 py-1">
         <div className="flex items-start xl:items-center justify-between ">
           <div className="flex items-start justify-start">
-            <MDBBtn floating gradient="purple" style={{borderRadius: "50%"}} className={styles.hamburger}>
+            <MDBBtn floating style={{borderRadius: "50%"}} className={styles.hamburger}>
               <MDBIcon icon="bars" />
             </MDBBtn>
-            {/* <div className="flex relative nav-logo">
-              <Link href="/"><img className={classnames("cursor-pointer", styles.Logo)} src={Logo} alt="Logo" /></Link>
-            </div> */}
           </div>
           <div className={`hidden flex-grow ${pageName ? '2xl:flex' : 'nav-home'} nav-links`}>
             Metrix Address
