@@ -30,7 +30,9 @@ const Header = (props) => {
             </MDBBtn>
           </div>
           <div className={`hidden flex-grow ${pageName ? 'xl:flex' : 'nav-home'} nav-links pl-2 ` + styles.title}>
-            Metrix Address
+            <Link href="/" className="cursor-pointer">
+              Metrix Address
+            </Link>
           </div>
           <div className="flex items-end items-center">
             <SearchBox inNav={true} />
