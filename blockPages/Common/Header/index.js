@@ -4,6 +4,7 @@ import SearchBox from "components/nav-search";
 import styles from './index.module.scss';
 import {MDBBtn, MDBIcon} from 'mdbreact'
 import Link from 'next/link'
+import IconButton from 'components/IconButton'
 
 const Header = (props) => {
   const [pageName, setPageName] = useState("");
@@ -22,7 +23,7 @@ const Header = (props) => {
   return (
     <header className={styles.header}>
       <nav className="flex-wrap top-nav px-1 py-1">
-        <div className="flex items-start xl:items-center justify-between ">
+        <div className="flex items-start items-center justify-between ">
           <div className="flex items-start justify-start">
             <MDBBtn floating style={{borderRadius: "50%"}} className={styles.hamburger} outline color="primary">
               <MDBIcon icon="bars" />
@@ -34,9 +35,9 @@ const Header = (props) => {
           <div className="flex items-end items-center">
             <SearchBox inNav={true} />
             <Link href="/cart">
-              <MDBBtn outline className="btn-noborder mr-4" color="primary">
+              <IconButton>
                 <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
-              </MDBBtn>
+              </IconButton>
             </Link>
           </div>
         </div>

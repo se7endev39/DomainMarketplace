@@ -1,4 +1,5 @@
 import React from 'react'
+import CartList from 'containers/cart/CartList'
 import styles from './index.module.scss'
 
 function Cart() {
@@ -11,7 +12,7 @@ function Cart() {
       <div className={styles.count}>
         2 items
       </div>
-      
+      <CartList />      
     </div>
   );
 }
