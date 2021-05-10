@@ -16,11 +16,11 @@ const Footer = (props) => {
       <div className="pb-2">
         Copyright © 2021 Metrix Domains Inc.All Rights Reserved.
       </div>
-      <div className="flex justify-evenly 2xl:pt-0 2xl:pl-4">
-        <Link href="/about"><a>Contact</a></Link>
-        <Link href="/mysourcer"><a>Terms</a></Link>
-        <Link href="/contribute"><a>Privacy Policy</a></Link>
-        <Link href="/how-it-works"><a>How it works</a></Link>
+      <div className="flex justify-evenly px-12 2xl:pt-0 2xl:px-4">
+        <Link href="/about"><a className={styles.link}>Contact</a></Link>
+        <Link href="/mysourcer"><a className={styles.link}>Terms</a></Link>
+        <Link href="/contribute"><a className={styles.link}>Privacy Policy</a></Link>
+        <Link href="/how-it-works"><a className={styles.link}>How it works</a></Link>
       </div>
     </nav>
   );

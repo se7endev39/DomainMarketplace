@@ -5,12 +5,7 @@ import Search from 'containers/homepage/Search'
 import styles from './index.module.scss'
 
 function HomePage() {
-  const [topics, setTopics] = useState([]);
-  const dispatch = useDispatch();
-  const router = useRouter()
-  // useEffect(() => {
-  //   router.push(`/Mobile`)
-  // }, [])
+  
 
   return (
     <div className={styles.homepage}>
