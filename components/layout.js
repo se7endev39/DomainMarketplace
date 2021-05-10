@@ -1,6 +1,6 @@
 import React, { Component, useEffect } from 'react';
-import { Nav } from "./nav";
-import BottomNav from "./bottom-nav";
+import Header from "blockPages/Common/Header";
+import Footer from "blockPages/Common/Footer";
 import Alert from "./alert";
 import { alertActions } from "../_actions";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,10 +20,10 @@ function Layout(props) {
 
   return (
     <div className='flex flex-col h-screen'>
-      <Nav noSearch={!shouldHaveSearch} />
+      <Header noSearch={!shouldHaveSearch} />
       {alert.message && <Alert alert={alert} />}
       {children}
-      <BottomNav />
+      <Footer />
     </div>
   );
 }

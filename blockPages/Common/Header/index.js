@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import SearchBox from "../nav-search";
+import SearchBox from "components/nav-search";
 import styles from './index.module.scss';
 import {MDBBtn, MDBIcon} from 'mdbreact'
 
-export const Nav = (props) => {
+const Header = (props) => {
   const [pageName, setPageName] = useState("");
   const dispatch = useDispatch();
   const loggedIn = useSelector((state) => state.authentication.loggedIn);
@@ -27,7 +27,7 @@ export const Nav = (props) => {
               <MDBIcon icon="bars" />
             </MDBBtn>
           </div>
-          <div className={`hidden flex-grow ${pageName ? '2xl:flex' : 'nav-home'} nav-links`}>
+          <div className={`hidden flex-grow ${pageName ? '2xl:flex' : 'nav-home'} nav-links pl-2 ` + styles.title}>
             Metrix Address
           </div>
           <div className="flex items-end items-center">
@@ -40,3 +40,5 @@ export const Nav = (props) => {
     </header>
   );
 }
+
+export default Header
