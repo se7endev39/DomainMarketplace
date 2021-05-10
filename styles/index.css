@@ -60,9 +60,9 @@
 
 body {
   /* @apply bg-blue-500 p-12; */
-  /* background: #3aa0c0;
-  color: white; */
-  font-size: 12px;
+  /* /* background: #3aa0c0; */
+  background-color: #F9FAFF;
+  font-size: 16px;
 }
 
 
@@ -71,7 +71,7 @@ body {
   color: #3aa0c0;
 }
 .bg-primary {
-  background: #3aa0c0;
+  background: white !important;
 }
 .bg-secondary {
   background: rgba(58, 160, 192, 0.13);
@@ -188,15 +188,6 @@ input:-webkit-autofill:active {
   width: 669px;
 }
 
-/* Top Nav */
-
-.top-nav {
-  padding: 39px 41px 29px 39px;
-}
-.top-nav .logo {
-  /* width: 180px; */
-  height: 42px;
-}
 .dropdown-btn{
   height: 42px;
 }
@@ -302,10 +293,6 @@ input:-webkit-autofill:active {
   /* height: 43px; */
   font-size: 16px;
   line-height: 0%;
-}
-.index-search.nav-search {
-  width: 410px;
-  margin-right: 30px;
 }
 .index-search input {
   height: 43px;

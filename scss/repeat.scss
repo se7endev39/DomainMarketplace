@@ -1,0 +1,13 @@
+%button {
+  display: inline-block;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+%center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+

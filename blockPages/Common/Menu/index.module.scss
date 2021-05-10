@@ -1,0 +1,35 @@
+.Menu{
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  &_item{
+    font-size: 28px;
+    font-weight: 700;
+    color: #1E2023;
+  }
+
+  &_item:hover{
+    color: #304A9A
+  }
+
+  &_bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  &_social{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+  }
+
+
+ 
+}

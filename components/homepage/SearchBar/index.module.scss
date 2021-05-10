@@ -1,0 +1,12 @@
+.search{
+  align-items: center;
+  &_icon{
+    color: grey;
+    font-size: 18px;
+  }
+  &_input{
+    padding: 1rem 1rem;
+    font-size: 20px;
+    flex-grow: 1;
+  }
+}
