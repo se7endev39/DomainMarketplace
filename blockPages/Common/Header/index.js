@@ -29,7 +29,7 @@ const Header = (props) => {
               <MDBIcon icon="bars" />
             </MDBBtn>
           </div>
-          <div className={`hidden flex-grow ${pageName ? '2xl:flex' : 'nav-home'} nav-links pl-2 ` + styles.title}>
+          <div className={`hidden flex-grow ${pageName ? 'xl:flex' : 'nav-home'} nav-links pl-2 ` + styles.title}>
             Metrix Address
           </div>
           <div className="flex items-end items-center">

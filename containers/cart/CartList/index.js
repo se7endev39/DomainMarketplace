@@ -1,30 +1,11 @@
 import CartItem from '../CartItem'
 import styles from './index.module.scss'
 
-const db_fake = [
-  {
-    domain: "cart.metrix",
-    price: "50"
-  },
-  {
-    domain: "cart.admin",
-    price: "300"
-  },
-  {
-    domain: "cart.media",
-    price: "50"
-  },
-  {
-    domain: "test.metrix",
-    price: "50"
-  },
-]
-
-const CartList = () => {
+const CartList = ({cart_list}) => {
   return (
-    <div className="pt-2">
+    <div className="pt-2 flex-grow">
       {
-        db_fake.map((item, i) => (
+        cart_list?.map((item, i) => (
           <CartItem key={i} {...item}/>
         ))
       }
