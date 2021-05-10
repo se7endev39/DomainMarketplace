@@ -1,12 +1,24 @@
 .search{
   align-items: center;
   &_icon{
-    color: grey;
+    color: white;
     font-size: 18px;
+    align-self: center;
+    padding-right: 1rem;
+  }
+  &_btn{
+    margin: 0;
+    align-items: center;
+    font-size: 18px;
+  }
+  &_input:focus{
+    outline: none;
   }
   &_input{
     padding: 1rem 1rem;
     font-size: 20px;
     flex-grow: 1;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 1px 0 -1px rgb(0 0 0 / 23%);
+    color: white;
   }
 }
