@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import SearchBox from "components/nav-search";
 import styles from './index.module.scss';
 import {MDBBtn, MDBIcon} from 'mdbreact'
+import Link from 'next/link'
 
 const Header = (props) => {
   const [pageName, setPageName] = useState("");
@@ -32,7 +33,11 @@ const Header = (props) => {
           </div>
           <div className="flex items-end items-center">
             <SearchBox inNav={true} />
-            <MDBIcon icon="shopping-cart" className="mr-4"/>
+            <Link href="/cart">
+              <MDBBtn outline className="btn-noborder mr-4" color="primary">
+                <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
+              </MDBBtn>
+            </Link>
           </div>
         </div>
 

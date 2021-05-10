@@ -12,7 +12,7 @@ const Footer = (props) => {
   })
 
   return (
-    <nav className={`flex pt-2 justify-center text-center flex-col bottom-nav fixed bottom-0 w-full 2xl:flex-row 2xl:pb-4`} style={{borderTop: "1px solid #bebebe"}}>
+    <nav className={`flex pt-2 justify-center text-center flex-col bottom-nav fixed bottom-0 w-full 2xl:flex-row 2xl:pb-4 ` + styles.Footer}>
       <div className="pb-2">
         Copyright © 2021 Metrix Domains Inc.All Rights Reserved.
       </div>

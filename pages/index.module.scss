@@ -1,34 +1,3 @@
 .homepage{
   color: var(--color-text-primary);
 }
-
-/* A powerful story can change the world. */
-.slogan{
-  
-  font-size: 45px;
-  line-height: 115%;
-  /* or 52px */
-  color: #1E2023;
-}
-
-.screen1{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0px;
-  top: 0px;
-  background: #CED3E3;
-  z-index: -1;
-}
-
-
-.verizon_text{
-  padding-top: 27px;
-  padding-left: 45px;
-  padding-right: 30px;
-  font-size: 21px;
-  line-height: 160%;
-  /* or 34px */
-  color: #1E2023;
-  opacity: 0.75;
-}

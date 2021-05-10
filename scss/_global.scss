@@ -68,6 +68,19 @@ body {
   border-color: var(--color-text-primary);
 }
 
+.btn-noborder{
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 50%;
+}
+
+.btn-noborder:hover{
+  background-color: rgba(0,0,0,0.1) !important;
+}
+
+.btn[class*="btn-outline-"] {
+  padding: .7rem 0.8rem;
+}
 
 a {
   color: var(--color-text-link);
