@@ -1,7 +1,7 @@
 import React, { Component, useEffect } from 'react';
 import { Nav } from "./nav";
-import { BottomNav } from "./bottom-nav";
-import { Alert } from "./alert";
+import BottomNav from "./bottom-nav";
+import Alert from "./alert";
 import { alertActions } from "../_actions";
 import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";

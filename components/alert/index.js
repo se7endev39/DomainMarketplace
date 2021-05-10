@@ -1,11 +1,11 @@
 import React from "react";
-import { alertActions } from "../_actions";
+import { alertActions } from "_actions";
 import { useDispatch, useSelector } from "react-redux";
-import { alertConstants, apiStatus } from "../utils/constants";
+import { alertConstants, apiStatus } from "utils/constants";
 import Link from 'next/link';
-import { errorAlertConstants } from "../utils/constants";
+import { errorAlertConstants } from "utils/constants";
 
-export const Alert = (props) => {
+const Alert = (props) => {
   const dispatch = useDispatch();
   const msg = props.alert.message;
   let messageElements = [];
@@ -67,3 +67,5 @@ export const Alert = (props) => {
     </div>
   );
 };
+
+export default Alert

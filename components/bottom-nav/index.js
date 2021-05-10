@@ -1,8 +1,9 @@
+import styles from './index.module.scss'
 import React, { useEffect, useState } from "react";
 import Link from 'next/link';
-import { NAV_LINK_CLASS } from "../utils/constants";
+import { NAV_LINK_CLASS } from "utils/constants";
 
-export const BottomNav = (props) => {
+const BottomNav = (props) => {
   const [pageName, setPageName] = useState("");
 
   useEffect(() => {
@@ -23,3 +24,4 @@ export const BottomNav = (props) => {
     </nav>
   );
 }
+export default BottomNav
