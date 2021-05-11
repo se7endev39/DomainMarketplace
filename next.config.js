@@ -14,5 +14,10 @@ module.exports = withImages(
   //     javascriptEnabled: true
   //   }
   // })
+  {
+    env: {
+      mongodburl: "Your MongoDB connection String",
+    }
+  }
 )
 
