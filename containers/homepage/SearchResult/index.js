@@ -48,18 +48,20 @@ const SearchResult = ({query}) => {
     ))
   }, 150), [query])
   return (
-    <div className="pt-4 pb-4 px-4 flex">
-      <div className="flex-grow mr-4">
+    <div className="pt-4 pb-4 px-4 flex flex-col lg:flex-row">
+      <div className="flex-grow lg:mr-4">
       {
         results.map( (domain, index) => (
           <SearchItem key={index} {...domain}/>
         ))
       }
       </div>
+      <div className="sm:mt-4 md:mt-4 lg:mt-0">
       {
         results.length > 0 && 
         <CartList cart_list={cart_list_fake}/>
       }
+      </div>
     </div>
   )
 }
