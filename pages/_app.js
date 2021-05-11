@@ -20,8 +20,8 @@ const MyApp = (props) => {
   useEffect(() => {
     console.log("MyApp props", props)
     dispatch(alertActions.clear());
-    dispatch(citationActions.getFavoriteCitations());
-    dispatch(topicActions.getFavoriteTopics());
+    // dispatch(citationActions.getFavoriteCitations());
+    // dispatch(topicActions.getFavoriteTopics());
   }, [])
 
   return (

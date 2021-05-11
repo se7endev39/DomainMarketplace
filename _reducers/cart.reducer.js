@@ -1,19 +1,17 @@
-import { alertConstants, apiStatus } from "../utils/constants";
+import {cartActions} from '_actions'
 
-export function cart(state = {}, action) {
+const initialState = { total:0, cart: []}
+
+export function cart(state = initialState, action) {
   switch (action.type) {
-    case alertConstants.SUCCESS:
+    case cartActions.types.get:
+      if(action.payload.length == 0) return initialState
       return {
-        type: apiStatus.SUCCESS,
-        message: action.message,
+        total: action.payload.reduce((a, b) => a.price + b.price),
+        cart: action.payload
       };
-    case alertConstants.ERROR:
-      return {
-        type: apiStatus.FAIL,
-        message: action.message,
-      };
-    case alertConstants.CLEAR:
-      return {};
+    case cartActions.types.clear:
+      return initialState
     default:
       return state;
   }

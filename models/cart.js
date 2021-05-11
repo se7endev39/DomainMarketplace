@@ -17,6 +17,4 @@ var cart = new Schema({
   }
 });
 
-var Cart = mongoose.model('Cart', cart);
-
-export default Cart;
+export default mongoose.model('Cart', cart);

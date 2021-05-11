@@ -16,7 +16,7 @@ module.exports = withImages(
   // })
   {
     env: {
-      mongodburl: "Your MongoDB connection String",
+      mongodburl: "mongodb://localhost/SAMarketplace",
     }
   }
 )
