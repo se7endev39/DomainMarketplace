@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
+    "db-start": "mongod --dbpath mongo_data",
     "build": "next build",
     "start": "next start"
   },

@@ -17,4 +17,6 @@ var cart = new Schema({
   }
 });
 
-export default mongoose.model('Cart', cart);
+console.log("Cart Model Init Again")
+
+export default mongoose.models.Cart || mongoose.model('Cart', cart)
