@@ -22,6 +22,6 @@ var user = new Schema({
 
 mongoose.models = {};
 
-var User = mongoose.model('User', user);
+var User = mongoose.models.User || mongoose.model('User', user);
 
 export default User;

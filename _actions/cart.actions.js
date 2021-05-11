@@ -19,8 +19,8 @@ const get = () => async (dispatch) => {
   })
 }
 
-const remove = (id) => async(dispatch) => {
-  const response = await axios.delete("/api/cart", {params: {id}})
+const remove = (domain) => async(dispatch) => {
+  const response = await axios.delete("/api/cart", {params: {domain}})
   get()(dispatch)
 }
 

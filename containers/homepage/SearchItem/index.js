@@ -16,7 +16,7 @@ const SearchItem = ({domain, price, status}) => {
         {domain}
       </div>
       <div className={styles.info + " flex justify-between items-center"}>
-        <div className={"pr-2 " + (price?styles.price:styles.unavailable)}>{price ? price: "Unavailable"}</div>
+        <div className={"pr-2 " + (price?styles.price:styles.unavailable)}>{price ? `$${price}`: "Unavailable"}</div>
         <div>
           <MDBBtn color="primary" onClick={onAddCart}>
             <MDBIcon icon="cart-plus pr-2"/>

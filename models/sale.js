@@ -18,6 +18,6 @@ var sale = new Schema({
   }
 });
 
-var Sale = mongoose.model('Sale', sale);
+var Sale = mongoose.models.Sale || mongoose.model('Sale', sale);
 
 export default Sale;

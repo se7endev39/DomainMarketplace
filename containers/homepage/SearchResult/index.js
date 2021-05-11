@@ -42,7 +42,7 @@ const SearchResult = ({query}) => {
       db_fake.map(ext => 
         ({
           domain: query + ext,
-          price: "$50",
+          price: "50",
           status: "Available",
         })
     ))

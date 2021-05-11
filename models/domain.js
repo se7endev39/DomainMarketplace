@@ -21,6 +21,6 @@ var domain = new Schema({
   }
 });
 
-var Domain = mongoose.model('Domain', domain);
+var Domain = mongoose.models.Domain || mongoose.model('Domain', domain);
 
 export default Domain;
