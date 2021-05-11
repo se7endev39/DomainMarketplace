@@ -3,8 +3,11 @@ import styles from './index.module.scss'
 import classnames from 'classnames'
 import {MDBBtn} from 'mdbreact'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 
 const CartList = ({cart_list}) => {
+  const router = useRouter()
   return (
     <div className={classnames("pt-2 pb-4 px-4", styles.Cart)}>
       <div className={styles.title}>Your Cart</div>
@@ -21,9 +24,9 @@ const CartList = ({cart_list}) => {
             <div className="text-xl font-bold">Order Total</div>
             <div className="text-lg font-bold">$400</div>
           </div>
-          <Link href="/cart" className="pt-2">
-            <MDBBtn color="primary" className="w-full mx-0 mt-0 text-base">Go To Cart</MDBBtn>
-          </Link> 
+          <MDBBtn color="primary" className="w-full mx-0 mt-0 text-base" onClick={() => {router.push("/cart")}}>
+            Go To Cart
+          </MDBBtn>
         </div>
       }
     </div>

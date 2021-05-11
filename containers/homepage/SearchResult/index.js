@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import CartList from '../CartList'
 import SearchItem from '../SearchItem'
 import styles from './index.module.scss'
+import _ from 'lodash'
 
 const db_fake = [
   ".admin",
@@ -32,7 +33,7 @@ const cart_list_fake = [
 const SearchResult = ({query}) => {
   const [results, setResults] = useState([]) 
 
-  useEffect(() => {
+  useEffect(_.debounce(() => {
     if(!query){
       setResults([])
       return
@@ -45,13 +46,13 @@ const SearchResult = ({query}) => {
           status: "Available",
         })
     ))
-  }, [query])
+  }, 150), [query])
   return (
     <div className="pt-4 pb-4 px-4 flex">
       <div className="flex-grow mr-4">
       {
         results.map( (domain, index) => (
-          <SearchItem {...domain}/>
+          <SearchItem key={index} {...domain}/>
         ))
       }
       </div>

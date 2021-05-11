@@ -25,7 +25,7 @@ const Header = (props) => {
       <nav className="flex-wrap top-nav px-1 py-1">
         <div className="flex items-start items-center justify-between  lg:px-4">
           <div className="flex items-start justify-start">
-            <MDBBtn floating style={{borderRadius: "50%"}} className={styles.hamburger} outline color="primary">
+            <MDBBtn floating="true" style={{borderRadius: "50%"}} className={styles.hamburger} outline={true} color="primary">
               <MDBIcon icon="bars" />
             </MDBBtn>
           </div>
@@ -41,7 +41,7 @@ const Header = (props) => {
                 <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
               </IconButton>
             </Link>
-            <Link href="/signin">
+            <Link href="/auth">
               <MDBBtn color="primary" className="px-3 py-2 text-base">
                 <MDBIcon icon="lock" className="pr-2"/>
                 Sign In / Sign Up
