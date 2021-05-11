@@ -1,7 +1,8 @@
 import CartItem from '../CartItem'
 import styles from './index.module.scss'
 import classnames from 'classnames'
-
+import {MDBBtn} from 'mdbreact'
+import Link from 'next/link'
 
 const CartList = ({cart_list}) => {
   return (
@@ -9,9 +10,21 @@ const CartList = ({cart_list}) => {
       <div className={styles.title}>Your Cart</div>
       <div className={classnames("pl-2", styles.count)}>4 items</div>
       {
-        cart_list?.map((item, i) => (
-          <CartItem key={i} {...item}/>
-        ))
+        cart_list.length > 0 &&
+        <div>
+          {  
+            cart_list?.map((item, i) => (
+              <CartItem key={i} {...item}/>
+            ))
+          }
+          <div className="flex justify-between py-2">
+            <div className="text-lg font-bold">Order Total</div>
+            <div className="text-base font-bold">$400</div>
+          </div>
+          <Link href="/cart">
+            <MDBBtn color="primary" className="w-full mx-0 mt-0 text-base">Go To Cart</MDBBtn>
+          </Link> 
+        </div>
       }
     </div>
   )
