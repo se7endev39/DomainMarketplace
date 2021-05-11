@@ -1,10 +1,11 @@
 .search{
   align-items: center;
+  background-color: var(--color-input-bg);
   &_icon{
     font-size: 18px;
   }
   &_input{
-    background-color: var(--color-header-bg);
+    background-color: transparent;
     color: var(--color-header-text);
   }
 }

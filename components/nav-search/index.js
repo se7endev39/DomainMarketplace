@@ -9,10 +9,10 @@ const SearchBox = (props) => {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState("");
   return (
-    <div className={`index-search items-center rounded-full flex relative overflow-hidden ${props.inNav ? "nav-search" : ""} ` + styles.search}>
+    <div className={`index-search items-center rounded-lg flex relative pl-3 overflow-hidden ${props.inNav ? "nav-search" : ""} ` + styles.search}>
       <MDBIcon icon="search" className={styles.search_icon}/>
       <input type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
-        className={"text-black pl-4 pr-4 focus:outline-none " + styles.search_input} name="" placeholder="Search Domains" />
+        className={"pl-3 pr-4 focus:outline-none " + styles.search_input} name="" placeholder="Search Domains" />
     </div>
   );
 }

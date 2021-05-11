@@ -5,12 +5,14 @@ import styles from './index.module.scss';
 import {MDBBtn, MDBIcon} from 'mdbreact'
 import Link from 'next/link'
 import IconButton from 'components/IconButton'
+import { useRouter } from "next/router";
 
 const Header = (props) => {
   const [pageName, setPageName] = useState("");
   const dispatch = useDispatch();
   const loggedIn = useSelector((state) => state.authentication.loggedIn);
   const shouldHaveSearch = !props.noSearch;
+  const router = useRouter()
 
   useEffect(() => {
     var path = window.location.pathname;
@@ -36,17 +38,13 @@ const Header = (props) => {
           </div>
           <div className="flex items-end items-center">
             <SearchBox inNav={true} />
-            <Link href="/cart">
-              <IconButton>
-                <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
-              </IconButton>
-            </Link>
-            <Link href="/auth">
-              <MDBBtn color="primary" className="px-3 py-2 text-base">
-                <MDBIcon icon="lock" className="pr-2"/>
-                Sign In / Sign Up
-              </MDBBtn>
-            </Link>
+            <IconButton onClick={() => router.push("/cart")}>
+              <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
+            </IconButton>
+            <MDBBtn color="primary" className="px-3 py-2 text-base" onClick={() => router.push("/auth")}>
+              <MDBIcon icon="lock" className="pr-2"/>
+              Sign In / Sign Up
+            </MDBBtn>
           </div>
         </div>
 

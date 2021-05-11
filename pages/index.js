@@ -6,11 +6,14 @@ import styles from './index.module.scss'
 import { cartActions } from '_actions'
 
 function HomePage() {
-  
+  const router = useRouter()
+  useEffect(() => {
+    router.push("/search?q=")
+  }, [])
 
   return (
     <div className={styles.homepage}>
-      <Search/>
+      
     </div>
   );
 }
