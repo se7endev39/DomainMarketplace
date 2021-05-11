@@ -1,11 +1,3 @@
-export const PRIMARY_BTN_CLASS = "rounded-full font-bold text-white bg-primary focus:outline-none hover-shadow sc-btn ";
-export const SECONDARY_BTN_CLASS = "rounded-full font-bold text-color-third bg-white focus:outline-none hover-shadow border-3 px-6 sc-btn ";
-export const CANCEL_BTN_CLASS =
-  "flex-shrink-0 bg-red-500 hover:bg-red-700 border-red-500 hover:border-red-700 text-sm border-4 text-white py-1 px-2 rounded ";
-export const PRIMARY_INPUT_CLASS =
-  "bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500 ";
-export const NAV_LINK_CLASS = " hover-link-shadow hover:text-gray-200 font-bold nav-link";
-
 export const apiStatus = {
   SUCCESS: "SUCCESS",
   FAIL: "FAIL",

@@ -23,7 +23,7 @@ const Header = (props) => {
   return (
     <header className={styles.header}>
       <nav className="flex-wrap top-nav px-1 py-1">
-        <div className="flex items-start items-center justify-between ">
+        <div className="flex items-start items-center justify-between  lg:px-4">
           <div className="flex items-start justify-start">
             <MDBBtn floating style={{borderRadius: "50%"}} className={styles.hamburger} outline color="primary">
               <MDBIcon icon="bars" />
