@@ -18,10 +18,10 @@ const CartList = ({cart_list}) => {
             ))
           }
           <div className="flex justify-between py-2">
-            <div className="text-lg font-bold">Order Total</div>
-            <div className="text-base font-bold">$400</div>
+            <div className="text-xl font-bold">Order Total</div>
+            <div className="text-lg font-bold">$400</div>
           </div>
-          <Link href="/cart">
+          <Link href="/cart" className="pt-2">
             <MDBBtn color="primary" className="w-full mx-0 mt-0 text-base">Go To Cart</MDBBtn>
           </Link> 
         </div>

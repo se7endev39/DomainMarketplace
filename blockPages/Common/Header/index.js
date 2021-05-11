@@ -41,6 +41,12 @@ const Header = (props) => {
                 <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
               </IconButton>
             </Link>
+            <Link href="/signin">
+              <MDBBtn color="primary" className="px-3 py-2 text-base">
+                <MDBIcon icon="lock" className="pr-2"/>
+                Sign In / Sign Up
+              </MDBBtn>
+            </Link>
           </div>
         </div>
 
