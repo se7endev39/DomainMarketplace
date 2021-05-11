@@ -36,7 +36,7 @@ const Header = (props) => {
               Metrix Address
             </Link>
           </div>
-          <div className="flex items-end items-center">
+          <div className="flex items-end items-center flex-grow justify-end">
             <SearchBox inNav={true} />
             <IconButton onClick={() => router.push("/cart")}>
               <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
