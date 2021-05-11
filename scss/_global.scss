@@ -66,6 +66,7 @@ body {
   color: var(--color-text-primary);
   font-size: 16px;
   border-color: var(--color-text-primary);
+  // margin-bottom: 80px;
 }
 
 .btn-noborder{
@@ -667,9 +668,6 @@ input:-webkit-autofill:active {
     bottom: 55px;
     height: 60px;
   }
-  .bottom-nav {
-    height: 55px;
-  }
 
   .index-title {
     font-size: 65px;
@@ -769,6 +767,9 @@ input:-webkit-autofill:active {
     left: 14px;
   }
 }
+
+
+
 /* @media (max-width: 320px) {
   .search-container {
     width: 300px;

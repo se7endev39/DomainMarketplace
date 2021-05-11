@@ -1,8 +1,13 @@
 .Due{
   border: 1px solid;
   border-radius: 1rem;
-  min-width: 400px;
   height: fit-content;
+}
+
+@media (min-width: 640px) {
+  .Due{
+    min-width: 400px;
+  }
 }
 
 .title{
