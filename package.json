@@ -28,7 +28,6 @@
     "mdbreact": "^5.0.2",
     "mongoose": "^5.12.8",
     "next": "^9.5.5",
-    "next-auth": "^3.21.1",
     "next-images": "^1.6.0",
     "next-redux-wrapper": "^6.0.2",
     "query-string": "^6.13.5",
