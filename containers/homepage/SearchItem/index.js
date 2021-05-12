@@ -10,6 +10,10 @@ const SearchItem = ({domain, price, status}) => {
     dispatch( cartActions.add({domain, price}) )
   }
 
+  const cancelBuy = () => {
+    dispatch( cartActions.remove(domain))
+  }
+
   return (
     <div className={styles.SearchItem + " mt-2 flex justify-between items-center"}>
       <div className={styles.domain + " pl-3"}>
@@ -26,10 +30,10 @@ const SearchItem = ({domain, price, status}) => {
             </MDBBtn>
           }
           {
-            status == "Taken" && 
-            <MDBBtn color="red" onClick={onAddCart} className={styles.btn}>
+            status == "Cart" && 
+            <MDBBtn color="red" onClick={cancelBuy} className={styles.btn}>
               <MDBIcon icon="trash pr-2"/>
-              Taken
+              cancel buy
             </MDBBtn>
           }
         </div>

@@ -23,7 +23,8 @@ const handler = async (req, res) => {
       {
         const { domain } = req.query;
         console.log('delete', domain, 'from cart')
-        await Cart.deleteOne({ domain })
+        const result = await Cart.deleteOne({ domain })
+        console.log('response', result)
         res.status(200).json({type: "success"})
         break;
       }

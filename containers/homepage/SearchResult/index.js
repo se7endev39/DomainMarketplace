@@ -28,7 +28,7 @@ const SearchResult = ({query}) => {
         return {
           domain,
           price: "50",
-          status: cart?"Taken":"Available",
+          status: cart?"Cart":"Available",
         }  
       }
     ))
