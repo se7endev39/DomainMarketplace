@@ -3,6 +3,7 @@ import CartList from '../CartList'
 import SearchItem from '../SearchItem'
 import styles from './index.module.scss'
 import _ from 'lodash'
+import { useSelector } from 'react-redux'
 
 const db_fake = [
   ".admin",
@@ -11,27 +12,9 @@ const db_fake = [
   ".metrix",
 ]
 
-const cart_list_fake = [
-  {
-    domain: "cart.metrix",
-    price: "50"
-  },
-  {
-    domain: "cart.admin",
-    price: "300"
-  },
-  {
-    domain: "cart.media",
-    price: "50"
-  },
-  {
-    domain: "test.metrix",
-    price: "50"
-  },
-]
-
 const SearchResult = ({query}) => {
   const [results, setResults] = useState([]) 
+  const cart_list = useSelector((state) => state.cart.cart);
 
   useEffect(_.debounce(() => {
     if(!query){
@@ -39,14 +22,17 @@ const SearchResult = ({query}) => {
       return
     }
     setResults(
-      db_fake.map(ext => 
-        ({
-          domain: query + ext,
+      db_fake.map(ext => {
+        const domain = query + ext
+        const cart = cart_list.find((item) => item.domain == domain)
+        return {
+          domain,
           price: "50",
-          status: "Available",
-        })
+          status: cart?"Taken":"Available",
+        }  
+      }
     ))
-  }, 150), [query])
+  }, 150), [query, cart_list])
   return (
     <div className="pt-4 pb-4 px-4 flex flex-col lg:flex-row">
       <div className="flex-grow lg:mr-4">
@@ -59,7 +45,7 @@ const SearchResult = ({query}) => {
       <div className="sm:mt-4 md:mt-4 lg:mt-0">
       {
         results.length > 0 && 
-        <CartList cart_list={cart_list_fake}/>
+        <CartList/>
       }
       </div>
     </div>

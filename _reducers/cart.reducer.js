@@ -7,8 +7,8 @@ export function cart(state = initialState, action) {
     case cartActions.types.get:
       if(action.payload.length == 0) return initialState
       return {
-        total: action.payload.reduce((a, b) => a.price + b.price),
-        cart: action.payload
+        total: action.payload.total,
+        cart: action.payload.cart
       };
     case cartActions.types.clear:
       return initialState

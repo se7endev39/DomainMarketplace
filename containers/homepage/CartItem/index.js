@@ -13,7 +13,7 @@ const CartItem = ({domain, price}) => {
       <div className={styles.domain}>{domain}</div>
       <div className="text-center pr-3 flex items-center">
         <div className={styles.price}>${price}</div>
-        <MDBIcon icon="trash" className="pl-2" onClick={deleteItem}/>
+        <MDBIcon icon="trash" className="pl-2 cursor-pointer" onClick={deleteItem}/>
       </div>
     </div>
   )

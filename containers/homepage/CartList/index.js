@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux'
 const CartList = () => {
   const router = useRouter()
   const cart_list = useSelector((state) => state.cart.cart);
+  const total = useSelector((state) => state.cart.total);
 
   return (
     <div className={classnames("pt-2 pb-4 px-4", styles.Cart)}>
@@ -26,7 +27,7 @@ const CartList = () => {
           }
           <div className="flex justify-between py-2">
             <div className="text-xl font-bold">Order Total</div>
-            <div className="text-lg font-bold">$400</div>
+            <div className="text-lg font-bold">${total}</div>
           </div>
           <MDBBtn color="primary" className="w-full mx-0 mt-0 text-base" onClick={() => {router.push("/cart")}}>
             Go To Cart

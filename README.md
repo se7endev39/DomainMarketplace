@@ -1,11 +1,11 @@
 # stxtch Frontend
-Firstly, install yarn to start this project
+Firstly, install mongodb and yarn to start this project
 
-Then to install dependencies
-
+Then to install node_module dependencies
 ```bash
 yarn
 ```
+
 To start mongodb
 ```bash
 yarn db-start

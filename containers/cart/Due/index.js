@@ -1,8 +1,12 @@
 import { MDBBtn } from 'mdbreact'
 import styles from './index.module.scss'
 import classnames from 'classnames'
+import { useSelector } from 'react-redux'
 
-const Due = ({total}) => {
+const Due = () => {
+
+  const total = useSelector((state) => state.cart.total);
+
   return (
     <div className={classnames(styles.Due, "py-2 px-4 mt-4 pb-4 md:ml-8")}>
       <div className={classnames(styles.title, "flex justify-between px-2 pt-4")}>
