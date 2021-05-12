@@ -8,7 +8,7 @@ const types = {
 }
 
 const signUp = ({email, password}) => async(dispatch) => {
-  const response = await axios.post("/api/auth/signUp", {email, password})
+  const response = await axios.post("/api/auth/signup", {email, password})
   switch(response.data.type){
     case "success":
       dispatch({
@@ -23,7 +23,7 @@ const signUp = ({email, password}) => async(dispatch) => {
 }
 
 const signIn = ({email, password}) => async (dispatch) => {
-  const response = await axios.post("/api/auth/signIn", {email, password})
+  const response = await axios.post("/api/auth/signin", {email, password})
   switch(response.data.type){
     case "success":
       dispatch({
