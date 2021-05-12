@@ -13,7 +13,7 @@ const Header = (props) => {
   // const loggedIn = useSelector((state) => state.authentication.loggedIn);
   // const shouldHaveSearch = !props.noSearch;
   const router = useRouter()
-
+  const signed = useSelector(state => state.auth.signed)
 
   useEffect(() => {
     var path = window.location.pathname;
@@ -42,10 +42,13 @@ const Header = (props) => {
             <IconButton onClick={() => router.push("/cart")}>
               <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
             </IconButton>
-            <MDBBtn color="primary" className="px-3 py-2 text-base" onClick={() => router.push("/auth/signin")}>
-              <MDBIcon icon="lock" className="pr-2"/>
-              Sign In / Sign Up
-            </MDBBtn>
+            {
+              !signed &&
+              <MDBBtn color="primary" className="px-3 py-2 text-base" onClick={() => router.push("/auth/signin")}>
+                <MDBIcon icon="lock" className="pr-2"/>
+                Sign In / Sign Up
+              </MDBBtn>
+            }
           </div>
         </div>
 

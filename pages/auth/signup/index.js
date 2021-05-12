@@ -13,10 +13,16 @@ function SignUp() {
   const dispatch = useDispatch()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const signed = useSelector(state => state.auth.signed)
   
   const signUp = () => {
     dispatch( authActions.signUp({email, password}) )
   }
+
+  useEffect(() => {
+    console.log("signed", signed)
+    signed && router.push("/")
+  }, [signed])
 
   return (
     <div className={classnames("px-4 py-4 mt-12 mx-auto max-w-2xl rounded-lg border-solid border ", styles.SignIn)}>

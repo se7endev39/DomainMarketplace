@@ -1,10 +1,9 @@
 import axios from 'axios'
+import {alertActions} from './alert.actions'
 
 const types = {
-  signUp_success: "ACTION_CART_SIGNUP_SUCCESS",
-  signUp_fail: "ACTION_CART_SIGNUP_FAIL",
-  signIn_success: "ACTION_CART_SIGNIN_SUCCESS",
-  signUp_fail: "ACTION_CART_SIGNIN_FAIL",
+  signUp: "ACTION_CART_signUp",
+  signIn: "ACTION_CART_signIn",
   singOut: "ACTION_AUTH_SIGNOUT",
 }
 
@@ -13,15 +12,13 @@ const signUp = ({email, password}) => async(dispatch) => {
   switch(response.data.type){
     case "success":
       dispatch({
-        type: types.signUp_success,
+        type: types.signUp,
         payload: response.data.payload
       })
+      dispatch(alertActions.success("Sign up success"))
       break;
     default:
-      dispatch({
-        type: types.signUp_fail,
-        message: response.data.data.message
-      })
+      dispatch(alertActions.error(response.data.message))
   }
 }
 
@@ -30,15 +27,13 @@ const signIn = ({email, password}) => async (dispatch) => {
   switch(response.data.type){
     case "success":
       dispatch({
-        type: types.signIn_success,
+        type: types.signIn,
         payload: response.data.payload
       })
+      dispatch(alertActions.success("Sign in success"))
       break;
     default:
-      dispatch({
-        type: types.signIn_fail,
-        message: response.data.data.message
-      })
+      dispatch(alertActions.error(response.data.message))
   }
 }
 

@@ -7,6 +7,10 @@ const handler = async (req, res) => {
     case "POST":
       {
         const { email, password } = req.body;
+        if(!email || !password){
+          res.status(200).json({type: "fail", message: "Wrong password or email"})
+          return
+        }
         const password_hash = await bcrypt.sign(password);
         const user = await User.findOne({email, password:password_hash}).lean()
         const token = "123123123"

@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { alertActions } from "_actions";
 import { useDispatch, useSelector } from "react-redux";
 import { alertConstants, apiStatus } from "utils/constants";
 import Link from 'next/link';
 import { errorAlertConstants } from "utils/constants";
+import classnames from 'classnames'
+import styles from './index.module.scss'
 
 const Alert = (props) => {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(alertActions.clear());
+    }, 1500)
+  }, [])
+
   const msg = props.alert.message;
   let messageElements = [];
 
@@ -42,13 +51,13 @@ const Alert = (props) => {
     messageElements = msg;
   }
 
-  let classes = "bg-green-100 border-green-400 text-green-700";
+  let classes = "border-blue-400 text-blue-700";
   if (props.alert.type === apiStatus.FAIL) {
-    classes = "bg-red-100 border-red-400 text-red-700";
+    classes = "text-red-700";
   }
 
   return (
-    <div className={`${classes} border px-4 py-3 rounded relative text-center`} role="alert">
+    <div className={classnames(classes, "px-4 py-3 rounded relative text-center", styles.Alert)} role="alert">
       <span className="block sm:inline">{messageElements}</span>
       <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
         <svg

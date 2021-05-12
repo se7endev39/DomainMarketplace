@@ -19,7 +19,10 @@ function SignIn() {
     dispatch( authActions.signIn({email, password}) )
   }
 
-  // useEffect(() => signed && router.push("/"), [signed])
+  useEffect(() => {
+    console.log("signed", signed)
+    signed && router.push("/")
+  }, [signed])
   
   return (
     <div className={classnames("px-4 py-4 mt-12 mx-auto max-w-2xl rounded-lg border-solid border ", styles.SignIn)}>
@@ -29,11 +32,11 @@ function SignIn() {
       <div className="pt-4">
         <div>
           <div className="pb-1 text-md">Email address</div>
-          <input type="text" className={classnames("pl-1 w-80", styles.input)} value="email" onChange={(e) => setEmail(e.target.value)}/>
+          <input type="text" className={classnames("pl-1 w-80", styles.input)} value={email} onChange={(e) => setEmail(e.target.value)}/>
         </div>
         <div className="pt-4">
           <div className="pb-1 text-md">Password</div>
-          <input type="password" className={classnames("pl-1 w-80", styles.input)} value="password" onChange={(e) => setPassword(e.target.value)}/>
+          <input type="password" className={classnames("pl-1 w-80", styles.input)} value={password} onChange={(e) => setPassword(e.target.value)}/>
         </div>
         <div className="text-center pt-4" onClick={signIn}>
           <MDBBtn color="primary">Sign in</MDBBtn>

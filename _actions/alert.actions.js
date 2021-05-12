@@ -1,6 +1,11 @@
 import { alertConstants } from "../utils/constants";
 
 export const alertActions = {
+  types: {
+    success: "ALERT_SUCCESS",
+    error: "ALERT_ERROR",
+    clear: "ALERT_CLEAR",
+  },
   success,
   error,
   clear,

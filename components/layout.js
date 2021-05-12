@@ -13,7 +13,8 @@ function Layout(props) {
 
   const componentName = _.get(children, [1, 'type', 'name'])
   console.log("componentName:", componentName)
-
+  if(alert)
+    console.log(alert)
   const shouldHaveSearch = componentName !== "HomePage"
   // dismiss alert on page change
 
