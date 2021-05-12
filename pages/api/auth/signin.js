@@ -13,7 +13,7 @@ const handler = async (req, res) => {
         if(user)
           res.status(200).json({type: "success", payload: {user, token}})
         else
-          res.status(403).json({type: "fail", message: "Wrong password or email"})
+          res.status(200).json({type: "fail", message: "Wrong password or email"})
         break;
       }
   }

@@ -19,7 +19,7 @@ function SignIn() {
     dispatch( authActions.signIn({email, password}) )
   }
 
-  useEffect(() => signed && router.push("/"), [signed])
+  // useEffect(() => signed && router.push("/"), [signed])
   
   return (
     <div className={classnames("px-4 py-4 mt-12 mx-auto max-w-2xl rounded-lg border-solid border ", styles.SignIn)}>

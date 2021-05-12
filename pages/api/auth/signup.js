@@ -7,13 +7,23 @@ const handler = async (req, res) => {
     case "POST":
       {
         const { email, password } = req.body;
+        console.log("signup", email, password)
         const password_hash = await bcrypt.sign(password);
-        const user = await User.findOne({email, password:password_hash}).lean()
+        
+        const user_duplicate = await User.findOne({email}).lean()
+        if(user_duplicate){
+          res.status(200).jon({type: "fail", mssage: "Duplicate Email"})
+          return
+        }
+
+        const user = new User({ email, password: password_hash });
+        const user_created = await user.save();
+
         const token = "123123123"
-        if(user)
+        if(user_created)
           res.status(200).json({type: "success", payload: {user, token}})
         else
-          res.status(403).json({type: "fail", message: "Wrong password or email"})
+          res.status(200).json({type: "fail", message: "Unkown Error"})
         break;
       }
   }
