@@ -7,6 +7,7 @@ yarn
 ```
 
 To start mongodb
+make "c:\mongo_db" folder
 ```bash
 yarn db-start
 ```
