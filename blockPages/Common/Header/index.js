@@ -6,7 +6,6 @@ import {MDBBtn, MDBIcon} from 'mdbreact'
 import Link from 'next/link'
 import IconButton from 'components/IconButton'
 import { useRouter } from "next/router";
-import { signIn, signOut, useSession } from 'next-auth/client'
 
 const Header = (props) => {
   const [pageName, setPageName] = useState("");
@@ -15,7 +14,6 @@ const Header = (props) => {
   // const shouldHaveSearch = !props.noSearch;
   const router = useRouter()
 
-  const [ session, loading ] = useSession()
 
   useEffect(() => {
     var path = window.location.pathname;
