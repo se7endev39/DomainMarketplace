@@ -6,13 +6,16 @@ import {MDBBtn, MDBIcon} from 'mdbreact'
 import Link from 'next/link'
 import IconButton from 'components/IconButton'
 import { useRouter } from "next/router";
+import { signIn, signOut, useSession } from 'next-auth/client'
 
 const Header = (props) => {
   const [pageName, setPageName] = useState("");
   const dispatch = useDispatch();
-  const loggedIn = useSelector((state) => state.authentication.loggedIn);
-  const shouldHaveSearch = !props.noSearch;
+  // const loggedIn = useSelector((state) => state.authentication.loggedIn);
+  // const shouldHaveSearch = !props.noSearch;
   const router = useRouter()
+
+  const [ session, loading ] = useSession()
 
   useEffect(() => {
     var path = window.location.pathname;
@@ -41,7 +44,7 @@ const Header = (props) => {
             <IconButton onClick={() => router.push("/cart")}>
               <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
             </IconButton>
-            <MDBBtn color="primary" className="px-3 py-2 text-base" onClick={() => router.push("/auth")}>
+            <MDBBtn color="primary" className="px-3 py-2 text-base" onClick={() => router.push("/auth/signin")}>
               <MDBIcon icon="lock" className="pr-2"/>
               Sign In / Sign Up
             </MDBBtn>

@@ -69,6 +69,15 @@ body {
   // margin-bottom: 80px;
 }
 
+input{
+  background-color: transparent;
+  color: var(--color-header-text);
+}
+
+input:focus{
+  outline: none;
+}
+
 .btn-noborder{
   border: none !important;
   box-shadow: none !important;

@@ -15,7 +15,7 @@ const handler = async (req, res) => {
       }
     case "GET":
       const cart_list = await Cart.find({}).lean()
-      console.log(cart_list.map(each => each.price).reduce((a,b) => a+b))
+      console.log("total price", cart_list.map(each => each.price).reduce((a,b) => a+b, 0))
       const total = cart_list.map(e => e.price).reduce((a,b) => a+b, 0);
       res.status(200).json({total, cart: cart_list})
       break;
