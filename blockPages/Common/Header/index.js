@@ -43,6 +43,12 @@ const Header = (props) => {
               <MDBIcon icon="shopping-cart" style={{fontSize:"1rem"}}/>
             </IconButton>
             {
+              signed && 
+              <IconButton onClick={() => router.push("/sales")}>
+                <MDBIcon icon="money-check-alt" style={{fontSize:"1rem"}}/>
+              </IconButton>
+            }
+            {
               !signed &&
               <MDBBtn color="primary" className="px-3 py-2 text-base" onClick={() => router.push("/auth/signin")}>
                 <MDBIcon icon="lock" className="pr-2"/>

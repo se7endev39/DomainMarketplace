@@ -7,10 +7,10 @@ import classnames from 'classnames';
 import { useState } from 'react';
 
 const price_list = [
-  [50, "1 year 50$ (no discount)"], 
-  [45, "6 months 45$ (10% discount)"],
-  [40, "3 months 40$ (20% discount)"],
-  [30, "1 months 30$ (40% discount)"],
+  [50, "1 year 50$"], 
+  [45, "6 months 45$"],
+  [40, "3 months 40$"],
+  [30, "1 months 30$"],
 ]
 
 const CartItem = ({domain}) => {
@@ -24,7 +24,10 @@ const CartItem = ({domain}) => {
       <div className={styles.domain}>{domain}</div>
       <div className="text-center pr-3 flex items-center">
         <div className={classnames(styles.price, "items-center")}>
-          <MDBDropdown>
+          <div className={classnames("px-3 py-2 rounded-lg", styles.subscription)}>
+            49.999.. / 1 year
+          </div>
+          {/* <MDBDropdown>
             <MDBDropdownToggle caret color="dark">
               {price_list[price][1]}
             </MDBDropdownToggle>
@@ -37,7 +40,7 @@ const CartItem = ({domain}) => {
                 ))
               }
             </MDBDropdownMenu>
-          </MDBDropdown>
+          </MDBDropdown> */}
         </div>
         <MDBIcon icon="trash" className="pl-2 cursor-pointer" onClick={deleteItem}/>
       </div>

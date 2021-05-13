@@ -1,6 +1,6 @@
 import User from 'models/user'
 import connectDB from 'middleware/mongodb'
-import bcrypt from 'middleware/bcrypt';
+// import bcrypt from 'middleware/bcrypt';
 
 const handler = async (req, res) => {
   switch(req.method){
@@ -11,7 +11,7 @@ const handler = async (req, res) => {
           res.status(200).json({type: "fail", message: "Wrong password or email"})
           return
         }
-        const password_hash = await bcrypt.sign(password);
+        const password_hash = password//await bcrypt.sign(password);
         const user = await User.findOne({email, password:password_hash}).lean()
         const token = "123123123"
         if(user)

@@ -1,6 +1,6 @@
 import User from 'models/user'
 import connectDB from 'middleware/mongodb'
-import bcrypt from 'middleware/bcrypt';
+// import bcrypt from 'middleware/bcrypt';
 
 const handler = async (req, res) => {
   switch(req.method){
@@ -12,7 +12,7 @@ const handler = async (req, res) => {
           return
         }
         console.log("signup", email, password)
-        const password_hash = await bcrypt.sign(password);
+        const password_hash = password//await bcrypt.sign(password);
         
         const user_duplicate = await User.findOne({email}).lean()
         if(user_duplicate){
