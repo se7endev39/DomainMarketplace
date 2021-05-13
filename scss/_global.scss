@@ -69,6 +69,25 @@ body {
   // margin-bottom: 80px;
 }
 
+.btn.btn-dark{
+  color: var(--color-btn-text);
+  background-color: var(--color-btn-bg) !important;
+  border-color: var(--color-btn-border) !important;
+  box-shadow: none !important;
+  border: 1px solid;
+}
+
+.btn.btn-dark:active,.btn.btn-dark:not([disabled]):not(.disabled):active {
+  background-color: var(--color-btn-active-bg) !important;
+  border-color: var(--color-btn-active-border) !important;
+  transition: none;
+}
+
+.btn.btn-dark:hover{
+  background-color: var(--color-btn-hover-bg) !important;
+  border-color: var(--color-btn-hover-border);
+}
+
 input{
   background-color: transparent;
   color: var(--color-header-text);

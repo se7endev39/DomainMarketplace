@@ -1,3 +1,23 @@
 .homepage{
   color: var(--color-text-primary);
 }
+
+.background{
+  background-image: url(/images/landing.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  min-height: 562px;
+  flex: 0 0 48.33333333%;
+  
+  background-clip: padding-box;
+  background-origin: padding-box;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.canvas{
+  background-color: var(--color-bg-canvas);
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: var(--color-border-primary);
+}

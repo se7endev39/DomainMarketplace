@@ -50,9 +50,9 @@ const Header = (props) => {
             }
             {
               !signed &&
-              <MDBBtn color="primary" className="px-3 py-2 text-base" onClick={() => router.push("/auth/signin")}>
-                <MDBIcon icon="lock" className="pr-2"/>
-                Sign In / Sign Up
+              <MDBBtn color="dark" className="px-3 py-2 text-base" onClick={() => router.push("/auth/signin")}>
+                <MDBIcon icon="sign-in-alt" className="pr-2"/>
+                Sign In
               </MDBBtn>
             }
           </div>
