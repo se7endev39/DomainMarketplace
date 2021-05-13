@@ -6,6 +6,7 @@ import styles from './index.module.scss'
 import { cartActions } from '_actions'
 import classnames from 'classnames'
 import { MDBBtn } from 'mdbreact'
+import Link from 'next/link'
 
 function HomePage() {
   const router = useRouter()
@@ -16,18 +17,18 @@ function HomePage() {
   return (
     <div className={styles.homepage}>
       <div className="py-4">
-        <div className="flex justify-end px-4 pb-2">
+        <div className="flex justify-end pr-16">
           {
             ["Home", "Domains", "Help", "About Us"].map((menu, i) =>(
-              <div key={i} className="px-2 text-lg">
+              <div key={i} className="px-4 text-md cursor-pointer">
                 {menu}
               </div>
             ))
           }
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row text-center">
-        <div className={classnames(styles.canvas, "pt-8 px-4 canvas")}>
+      <div className={classnames(styles.canvas, "flex flex-col lg:flex-row text-center")}>
+        <div className="pt-8 px-4 canvas">
           <div className={classnames('text-xl tracking-widest')}>
             WEBSITES + MARKETING
           </div>
@@ -40,12 +41,22 @@ function HomePage() {
           </div>
           <div className="pt-4 pb-8">
             <MDBBtn color="dark">
-              Find Domains
+              <Link href="/search">Find Domains</Link>
             </MDBBtn>
           </div>
         </div>
         <div className={classnames(styles.background)}>
-
+        </div>
+      </div>
+      <div className="py-8 text-center">
+        <div className="pt-4 text-3xl font-bold">
+          Premium Domains Sale
+        </div>
+        <div className="pt-2 text-xl">
+          Rare & exclusive blockchain domain names, available for the first time ever.
+        </div>
+        <div>
+          
         </div>
       </div>
 
