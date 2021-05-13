@@ -7,11 +7,13 @@ import { search } from "./search.reducer";
 import { topic } from "./topic.reducer";
 import { citation } from "./citation.reducer";
 import { cart } from './cart.reducer'
+import { sales } from './sales.reducer'
 
 const rootReducer = combineReducers({
   auth,
   users,
   cart,
+  sales,
   alert,
   search,
   topic,

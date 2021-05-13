@@ -53,7 +53,7 @@ function HomePage() {
           Premium Domains Sale
         </div>
         <div className="pt-2 text-xl">
-          Rare & exclusive blockchain domain names, available for the first time ever.
+          Rare & exclusive metrix domain names, available for the first year.
         </div>
         <div>
           

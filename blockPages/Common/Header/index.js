@@ -32,7 +32,7 @@ const Header = (props) => {
               <MDBIcon icon="bars" />
             </MDBBtn>
           </div>
-          <div className={`hidden flex-grow ${pageName ? 'xl:flex' : 'nav-home'} nav-links pl-2 ` + styles.title}>
+          <div className={`hidden flex-grow ${pageName ? 'md:flex' : 'nav-home'} nav-links pl-2 ` + styles.title}>
             <Link href="/" className="cursor-pointer">
               Metrix Address
             </Link>
