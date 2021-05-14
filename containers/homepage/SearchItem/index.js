@@ -20,7 +20,7 @@ const SearchItem = ({domain, price, status}) => {
         {domain}
       </div>
       <div className={styles.info + " flex justify-between items-center"}>
-        <div className={"pr-2 " + (price?styles.price:styles.unavailable)}>{status != "Hold" && price ? `$${price}`: ""}</div>
+        <div className={"pr-2 " + (price?styles.price:styles.unavailable)}>{(status == "Available" || status == "Taken") && price ? `$${price}`: ""}</div>
         <div>
           {
             (status == "Available" || status == "Taken") &&
@@ -32,7 +32,7 @@ const SearchItem = ({domain, price, status}) => {
           {
             status == "Cart" && 
             <MDBBtn color="dark" onClick={cancelBuy} className={styles.btn}>
-              <MDBIcon icon="trash pr-2"/>
+              <MDBIcon icon="times pr-2"/>
               cancel buy
             </MDBBtn>
           }

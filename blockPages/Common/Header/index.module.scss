@@ -18,3 +18,9 @@
   font-size: 24px;
   font-weight: 700;
 }
+
+@media (max-width: 760px) {
+  .signin{
+    display: none;
+  }
+}

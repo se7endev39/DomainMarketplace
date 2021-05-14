@@ -28,13 +28,13 @@ const SearchResult = ({query, result}) => {
         const domain_db = result.find( each => each.name == domain )
         const cart = cart_list.find((item) => item.domain == domain)
         let status = "Available"
-        if( cart ) status = "Cart"
         let price = 50
         if( domain_db ) {
           price = domain_db.price
           status = domain_db.status
           console.log(domain_db)
         }
+        if( cart ) status = "Cart"
         return {
           domain,
           price,

@@ -5,8 +5,9 @@ import Search from 'containers/homepage/Search'
 import styles from './index.module.scss'
 import { cartActions } from '_actions'
 import classnames from 'classnames'
-import { MDBBtn } from 'mdbreact'
+import { MDBBtn, MDBIcon } from 'mdbreact'
 import Link from 'next/link'
+import Faq from "containers/landing/faq";
 
 const images = [
   {
@@ -20,6 +21,52 @@ const images = [
   {
     url: "/images/landing/3.svg",
     title: "Domain transfer"
+  },
+]
+
+const premiums = [
+  {
+    domain: "appleadmin",
+    price: 50000
+  },
+  {
+    domain: "applemedia",
+    price: 28000
+  },
+  {
+    domain: "applemetrix",
+    price: 40000
+  },
+  {
+    domain: "applecrypto",
+    price: 6000
+  },
+]
+
+const faqs = [
+  {
+    question: "Will I be able to transfer my domain?",
+    answer: "Yes. The domain is stored in your cryptocurrency wallet and can be transferred by you after you claim the name on the blockchain with your wallet."
+  },
+  {
+    question: "Which cryptocurrencies will I be able to use with my domain?",
+    answer: "Yes. The domain is stored in your cryptocurrency wallet and can be transferred by you after you claim the name on the blockchain with your wallet."
+  },
+  {
+    question: "Does Unstoppable Domains provide you with a wallet?",
+    answer: "Yes. The domain is stored in your cryptocurrency wallet and can be transferred by you after you claim the name on the blockchain with your wallet."
+  },
+  {
+    question: "How will I be able to view a blockchain website?",
+    answer: "Yes. The domain is stored in your cryptocurrency wallet and can be transferred by you after you claim the name on the blockchain with your wallet."
+  },
+  {
+    question: "Will I be able to search for and find blockchain domain websites on Google or other search engines?",
+    answer: "Yes. The domain is stored in your cryptocurrency wallet and can be transferred by you after you claim the name on the blockchain with your wallet."
+  },
+  {
+    question: "Will there be some sort of ‘whois’ record with my personal information associated to my domain?",
+    answer: "Yes. The domain is stored in your cryptocurrency wallet and can be transferred by you after you claim the name on the blockchain with your wallet."
   },
 ]
 
@@ -55,7 +102,7 @@ function HomePage() {
             Vitae congue mauris rhoncus aenean vel elit scelerisque. Consequat nisl vel pretium lectus quam id leo in vitae. Dictum sit amet justo donec enim diam vulputate. Sociis natoque penatibus et magnis dis parturient. 
           </div>
           <div className="pt-4 pb-8">
-            <MDBBtn color="dark">
+            <MDBBtn color="dark" className="text-lg">
               <Link href="/search">Find Domains</Link>
             </MDBBtn>
           </div>
@@ -70,7 +117,7 @@ function HomePage() {
         <div className="text-lg py-8 font-italic pt-4">
           By the domain, people can immediately identify what the company is doing. Choose an extension that's right for your website to grab the attention of potential customers.
         </div>
-        <div className="pt-4 flex justify-evenly">
+        <div className="pt-4 flex justify-center flex-wrap">
         {
           images.map( (image, index) => (
             <div key={index}>
@@ -85,14 +132,48 @@ function HomePage() {
         }
         </div>
       </div>
-      <div className={classnames("py-4 text-center", styles.divider)}>
-        <div className="pt-4 text-4xl font-bold">
+      <div className={classnames("py-8 text-center", styles.divider, styles.land2)}>
+        <div className="text-4xl font-bold">
           Premium Domains Sale
         </div>
         <div className="pt-2 text-xl">
           Rare & exclusive metrix domain names, available for the first year.
         </div>
+        <div className="pt-4 flex justify-center flex-wrap">
+        {
+          premiums.map( ({domain, price}, index) => (
+            <div key={index} className={classnames(styles.premium, "mx-4 mt-4 pt-3")}>
+              <div className={classnames("px-4 pt-4 text-2xl font-bold", styles.wrapper)}>
+                {domain}
+              </div>
+              <div className={classnames("text-xl font-bold ", styles.price)}>
+                ${ price }
+              </div>
+              <div className="pt-6 pb-4">
+                <MDBBtn color="dark">
+                  Add to Cart
+                </MDBBtn>
+              </div>
+            </div>
+          ))
+        }
+        </div>
+      </div>
 
+      <div className={classnames("py-8 text-center", styles.divider, styles.land2)}>
+        <div className="text-4xl font-bold">
+          FAQ
+        </div>
+        <div className="pt-4 flex justify-center flex-wrap">
+        {
+          faqs.map( (faq, index) => (
+            <Faq {...faq} key={index}/>
+          ))
+        }
+        </div>
+        <div className="pb-12">
+
+        </div>
       </div>
 
     </div>

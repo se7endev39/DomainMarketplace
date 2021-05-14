@@ -50,9 +50,9 @@ const Header = ({onSidebar}) => {
             }
             {
               !signed &&
-              <MDBBtn color="dark" className="px-3 py-2 text-base" onClick={() => router.push("/auth/signin")}>
+              <MDBBtn color="dark" className="px-3 py-2 text-base flex items-center" onClick={() => router.push("/auth/signin")}>
                 <MDBIcon icon="sign-in-alt" className="pr-2"/>
-                Sign In
+                <div className={styles.signin}>Sign In</div>
               </MDBBtn>
             }
           </div>
