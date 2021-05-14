@@ -21,3 +21,26 @@
   border-bottom: 1px solid;
   border-color: var(--color-border-primary);
 }
+
+.round_image{
+  background-position: center;
+  background-size: cover;
+  background-color: #ccb03f;
+  border-radius: 50%;
+  border: 3px solid white;
+  filter: grayscale(0.1) contrast(1.1) brightness(0.8);
+}
+
+.wrapper{
+}
+
+@media (min-width: 1200px) {
+  .land2{
+    width: 1167px;
+    margin: auto;
+  }
+}
+
+.divider{
+  border-top: 1px solid var(--color-border-secondary);
+}

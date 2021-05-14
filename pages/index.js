@@ -8,6 +8,21 @@ import classnames from 'classnames'
 import { MDBBtn } from 'mdbreact'
 import Link from 'next/link'
 
+const images = [
+  {
+    url: "/images/landing/1.png",
+    title: "New domain extensions"
+  },
+  {
+    url: "/images/landing/2.jpg",
+    title: "Batch Domain Search"
+  },
+  {
+    url: "/images/landing/3.svg",
+    title: "Domain transfer"
+  },
+]
+
 function HomePage() {
   const router = useRouter()
   useEffect(() => {
@@ -48,16 +63,36 @@ function HomePage() {
         <div className={classnames(styles.background)}>
         </div>
       </div>
-      <div className="py-8 text-center">
-        <div className="pt-4 text-3xl font-bold">
+      <div className={ classnames("py-8 px-12 text-center", styles.land2)}>
+        <div className="px-20 text-4xl font-medium">
+          Why Do I Need A Domain Name?
+        </div>
+        <div className="text-lg py-8 font-italic pt-4">
+          By the domain, people can immediately identify what the company is doing. Choose an extension that's right for your website to grab the attention of potential customers.
+        </div>
+        <div className="pt-4 flex justify-evenly">
+        {
+          images.map( (image, index) => (
+            <div key={index}>
+              <div className={classnames("px-4 py-4 ", styles.wrapper)}>
+                <div className={ classnames("w-56 h-56", styles.round_image) } style={{backgroundImage: `url(${ image.url })`}}/>
+              </div>
+              <div className="text-xl font-bold ">
+                { image.title }
+              </div>
+            </div>
+          ))
+        }
+        </div>
+      </div>
+      <div className={classnames("py-4 text-center", styles.divider)}>
+        <div className="pt-4 text-4xl font-bold">
           Premium Domains Sale
         </div>
         <div className="pt-2 text-xl">
           Rare & exclusive metrix domain names, available for the first year.
         </div>
-        <div>
-          
-        </div>
+
       </div>
 
     </div>
