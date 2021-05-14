@@ -3,13 +3,16 @@ import styles from './index.module.scss'
 import classnames from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartActions } from '_actions'
+import { useRouter } from 'next/router'
 
 const Due = () => {
   const total = useSelector((state) => state.cart.total);
+  const router = useRouter()
 
   const dispatch = useDispatch()
   const checkout = () => {
     dispatch( cartActions.checkout() )    
+    router.push("/sales")
   }
   return (
     <div className={classnames(styles.Due, "py-2 px-4 mt-4 pb-4 md:ml-8")}>

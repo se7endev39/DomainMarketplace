@@ -7,7 +7,7 @@ import Link from 'next/link'
 import IconButton from 'components/IconButton'
 import { useRouter } from "next/router";
 
-const Header = (props) => {
+const Header = ({onSidebar}) => {
   const [pageName, setPageName] = useState("");
   const dispatch = useDispatch();
   // const loggedIn = useSelector((state) => state.authentication.loggedIn);
@@ -28,7 +28,7 @@ const Header = (props) => {
       <nav className="flex-wrap top-nav px-1 py-1">
         <div className="flex items-start items-center justify-between  lg:px-4">
           <div className="flex items-start justify-start">
-            <MDBBtn floating="true" style={{borderRadius: "50%"}} className={styles.hamburger} outline={true} color="primary">
+            <MDBBtn floating="true" style={{borderRadius: "50%"}} className={styles.hamburger} outline={true} color="primary" onClick={onSidebar}>
               <MDBIcon icon="bars" />
             </MDBBtn>
           </div>

@@ -1,3 +1,10 @@
 .Search{
   color: var(--color-text-primary);
 }
+
+@media (min-width: 1200px) {
+  .Search{
+    width: 1167px;
+    margin: auto;
+  }
+}

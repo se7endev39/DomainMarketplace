@@ -24,14 +24,14 @@ const SearchItem = ({domain, price, status}) => {
         <div>
           {
             status == "Available" &&
-            <MDBBtn color="primary" onClick={onAddCart} className={styles.btn}>
+            <MDBBtn color="dark" onClick={onAddCart} className={styles.btn}>
               <MDBIcon icon="cart-plus pr-2"/>
               Add to cart
             </MDBBtn>
           }
           {
             status == "Cart" && 
-            <MDBBtn color="red" onClick={cancelBuy} className={styles.btn}>
+            <MDBBtn color="dark" onClick={cancelBuy} className={styles.btn}>
               <MDBIcon icon="trash pr-2"/>
               cancel buy
             </MDBBtn>

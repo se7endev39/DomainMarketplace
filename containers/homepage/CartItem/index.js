@@ -25,7 +25,7 @@ const CartItem = ({domain}) => {
       <div className="text-center pr-3 flex items-center">
         <div className={classnames(styles.price, "items-center")}>
           <div className={classnames("px-3 py-2 rounded-lg", styles.subscription)}>
-            49.999.. / 1 year
+            49.999 / 1 year
           </div>
           {/* <MDBDropdown>
             <MDBDropdownToggle caret color="dark">

@@ -5,6 +5,7 @@ import styles from './index.module.scss'
 import Due from '../../containers/cart/Due'
 import { cartActions } from '_actions'
 import { useDispatch, useSelector } from 'react-redux'
+import classnames from 'classnames'
 
 
 function Cart() {
@@ -16,7 +17,7 @@ function Cart() {
   }, [])
   
   return (
-    <div className="px-4 pt-8">
+    <div className={classnames(styles.Cart, "px-4 pt-8")}>
       <div className={styles.title}>
         Your Cart
       </div>

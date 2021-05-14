@@ -1,15 +1,20 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component, useEffect, useRef } from 'react';
 import Header from "blockPages/Common/Header";
 import Footer from "blockPages/Common/Footer";
 import Alert from "./alert";
 import { alertActions } from "../_actions";
 import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";
+import Sidebar from 'blockPages/Common/Sidebar';
 
 function Layout(props) {
   const { children } = props
   const dispatch = useDispatch();
   const alert = useSelector((state) => state.alert);
+  const sidebar_ref = useRef()
+  const onSidebar = () => {
+    sidebar_ref.current.openSidebar()
+  }
 
   const componentName = _.get(children, [1, 'type', 'name'])
   console.log("componentName:", componentName)
@@ -21,7 +26,8 @@ function Layout(props) {
 
   return (
     <div className='flex flex-col h-screen'>
-      <Header noSearch={!shouldHaveSearch} />
+      <Header noSearch={!shouldHaveSearch} onSidebar={onSidebar}/>
+      <Sidebar ref={sidebar_ref}/>
       {alert.message && <Alert alert={alert} />}
       {children}
       <Footer />
