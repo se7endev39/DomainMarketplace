@@ -51,9 +51,9 @@ const Alert = (props) => {
     messageElements = msg;
   }
 
-  let classes = "border-green-400 text-green-700";
+  let classes = styles.success;
   if (props.alert.type === apiStatus.FAIL) {
-    classes = "text-red-700";
+    classes = styles.warn;
   }
 
   return (

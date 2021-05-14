@@ -10,3 +10,21 @@
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+.success{
+  background-color: var(--color-alert-success-bg);
+  color: var(--color-alert-success-text);
+  border-color: var(--color-alert-success-border);
+}
+
+.info{
+  background-color: var(--color-info-warn-border);
+  color: var(--color-info-warn-text);
+  border-color: var(--color-info-warn-border);
+}
+
+.warn{
+  background-color: var(--color-alert-warn-border);
+  color: var(--color-alert-warn-text);
+  border-color: var(--color-alert-warn-border);
+}

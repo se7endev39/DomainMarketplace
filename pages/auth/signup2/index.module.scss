@@ -1,0 +1,13 @@
+.SignIn{
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-header-search-border);
+}
+
+.input{
+  border-bottom: 1px solid;
+  width: 18rem;
+}
+
+.input:focus{
+  border-color: var(--color-border-focus)
+}
