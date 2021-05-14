@@ -7,11 +7,11 @@ import { MDBIcon } from 'mdbreact'
 import Link from 'next/link'
 
 const sidebar_menu = [
-  {name:"Profile Settings", href:"/search", icon: "times"},
-  {name:"My Watchlist", href:"/search", icon: "times"},
-  {name:"Search domains", href:"/search", icon: "times"},
-  {name:"Transaction history", href:"/search", icon: "times"},
-  {name:"Credits", href:"/search", icon: "times"},
+  {name:"Profile Settings", href:"/search", icon: "user-circle"},
+  {name:"My Watchlist", href:"/search", icon: "bars"},
+  {name:"Search domains", href:"/search", icon: "search"},
+  {name:"Transaction history", href:"/search", icon: "history"},
+  {name:"Credits", href:"/search", icon: "credit-card"},
 ]
 
 const Sidebar = (props, ref) => {
