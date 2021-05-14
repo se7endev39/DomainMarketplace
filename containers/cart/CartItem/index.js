@@ -13,7 +13,7 @@ const CartItem = ({domain, price}) => {
     <div className={"mt-3 pt-3 flex justify-between " + styles.CartItem}>
       <div className={styles.domain + " pl-3"}>{domain}</div>
       <div className="flex flex-col text-center pr-3">
-        <div className={classnames( styles.price, "text-lg" )}>${price-0.001}/1 year</div>
+        <div className={classnames( styles.price, "text-lg" )}>${price} / 1 year</div>
         <div>
           <MDBBtn outline className="btn-noborder" color="primary" onClick={deleteItem}>
             <MDBIcon icon="trash"/>

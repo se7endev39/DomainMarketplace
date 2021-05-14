@@ -20,10 +20,10 @@ const SearchItem = ({domain, price, status}) => {
         {domain}
       </div>
       <div className={styles.info + " flex justify-between items-center"}>
-        <div className={"pr-2 " + (price?styles.price:styles.unavailable)}>{price ? `$${price}`: "Unavailable"}</div>
+        <div className={"pr-2 " + (price?styles.price:styles.unavailable)}>{status != "Hold" && price ? `$${price}`: ""}</div>
         <div>
           {
-            status == "Available" &&
+            (status == "Available" || status == "Taken") &&
             <MDBBtn color="dark" onClick={onAddCart} className={styles.btn}>
               <MDBIcon icon="cart-plus pr-2"/>
               Add to cart
@@ -35,6 +35,12 @@ const SearchItem = ({domain, price, status}) => {
               <MDBIcon icon="trash pr-2"/>
               cancel buy
             </MDBBtn>
+          }
+          {
+            status == "Hold" && 
+            <div className="py-3 items-center flex">
+              not available or owned by other person
+            </div>
           }
         </div>
         <div className={"pr-4 pl-2 " + styles.detail}>

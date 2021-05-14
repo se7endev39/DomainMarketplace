@@ -22,8 +22,17 @@ const changePrice = ({domain, price}) => async (dispatch) => {
   get()(dispatch)
 }
 
+const setHold = ({ domain, status}) => async (dispatch) => {
+  const response = await axios.put("/api/sales", {domain, status})
+  if(response.data.type == "success"){
+    dispatch(alertActions.success(`Status for ${domain} changed`))
+  }
+  get()(dispatch)
+}
+
 export const salesActions = {
   types,
   get,
   changePrice,
+  setHold,
 };

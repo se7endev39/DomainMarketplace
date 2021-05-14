@@ -75,6 +75,7 @@ body {
   border-color: var(--color-btn-border) !important;
   box-shadow: none !important;
   border: 1px solid;
+  font-family: monospace;
 }
 
 .btn.btn-dark:active,.btn.btn-dark:not([disabled]):not(.disabled):active {

@@ -13,7 +13,7 @@ const db_fake = [
   "metrix",
 ]
 
-const SearchResult = ({query}) => {
+const SearchResult = ({query, result}) => {
   const [results, setResults] = useState([]) 
   const cart_list = useSelector((state) => state.cart.cart);
 
@@ -25,11 +25,20 @@ const SearchResult = ({query}) => {
     setResults(
       db_fake.map(ext => {
         const domain = query + ext
+        const domain_db = result.find( each => each.name == domain )
         const cart = cart_list.find((item) => item.domain == domain)
+        let status = "Available"
+        if( cart ) status = "Cart"
+        let price = 50
+        if( domain_db ) {
+          price = domain_db.price
+          status = domain_db.status
+          console.log(domain_db)
+        }
         return {
           domain,
-          price: "50",
-          status: cart?"Cart":"Available",
+          price,
+          status
         }  
       }
     ))

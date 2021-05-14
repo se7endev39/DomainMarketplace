@@ -8,19 +8,20 @@ const handler = async (req, res) => {
   switch(req.method){
     case "PUT":
       {
-        const { domain, price } = req.body;
+        const { domain, price, status } = req.body;
         const old_domain = await Domain.findOne({name: domain})
         if ( !old_domain ){
           res.status(200).json({type: "fail"})
           return
         }
-        old_domain.price = price
+        price && ( old_domain.price = price )
+        status && ( old_domain.status = status )
         await old_domain.save()
         res.status(200).json({type: "success"})
         break;
       }
     case "GET":
-      const sales_list = await Domain.find({status: "Taken"}).lean()
+      const sales_list = await Domain.find({}).lean()
       res.status(200).json(sales_list)
       break;
     case "DELETE":

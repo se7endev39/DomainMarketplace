@@ -17,7 +17,7 @@ var domain = new Schema({
   },
   status: {
     type: String,
-    enum: ["Available", "Protected", "Taken", "Unavailable"]
+    enum: ["Available", "Protected", "Taken", "Unavailable", "Hold"]
   }
 });
 

@@ -4,17 +4,24 @@ import SearchResult from '../SearchResult'
 import styles from './index.module.scss'
 import _ from 'lodash'
 import { useRouter } from 'next/router'
+import { useDispatch, useSelector } from 'react-redux'
+import { searchActions } from '_actions'
 
 const Search = () => {
-  const [query, setQuery] = useState("")
-
+  
   const router = useRouter()
+  const dispatch = useDispatch()
+
+  const result = useSelector( state => state.search )
+  const [query, setQuery] = useState("")
   //
   useEffect(() => {
     router.replace({
       pathname: "/search",
       query: {q: query}
     })
+    if(query)
+      dispatch( searchActions.search(query) )
   }, [query])
 
   useEffect(() => {
@@ -28,8 +35,8 @@ const Search = () => {
       <div className={styles.title + " pb-8"}>
         Buy or Sell Domain Names
       </div>
-      <SearchBar onChange={setQuery} query={query}/>
-      <SearchResult query={query}/>
+      <SearchBar onChange={setQuery} query={query} />
+      <SearchResult query={query} result={result} />
     </div>
   )
 }

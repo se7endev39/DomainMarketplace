@@ -1,26 +1,11 @@
-import { searchConstants, apiStatus } from "../utils/constants";
+import {searchActions} from '_actions'
 
-export function search(state = {}, action) {
-  console.log("search reduce action:", action);
-  const term = action.term;
+const initialState = []
+
+export function search(state = initialState, action) {
   switch (action.type) {
-    case searchConstants.SEARCH_REQUEST:
-      return {
-        loading: true,
-        term
-      };
-    case searchConstants.SEARCH_SUCCESS:
-      return {
-        topics: action.topics,
-        loading: false,
-        term
-      };
-    case searchConstants.GETALL_FAILURE:
-      return {
-        error: action.err,
-        loading: false,
-        term
-      };
+    case searchActions.types.search:
+      return [ ...action.payload ]
     default:
       return state;
   }

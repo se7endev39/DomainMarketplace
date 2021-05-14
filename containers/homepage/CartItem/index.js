@@ -13,19 +13,18 @@ const price_list = [
   [30, "1 months 30$"],
 ]
 
-const CartItem = ({domain}) => {
+const CartItem = ({domain, price}) => {
   const dispatch = useDispatch()
   const deleteItem = () => {
     dispatch( cartActions.remove(domain) )
   }
-  const [price, setPrice] = useState(0)
   return (
     <div className={"py-2 flex justify-between items-center " + styles.CartItem}>
       <div className={styles.domain}>{domain}</div>
       <div className="text-center pr-3 flex items-center">
         <div className={classnames(styles.price, "items-center")}>
           <div className={classnames("px-3 py-2 rounded-lg", styles.subscription)}>
-            49.999 / 1 year
+            {price} / 1 year
           </div>
           {/* <MDBDropdown>
             <MDBDropdownToggle caret color="dark">

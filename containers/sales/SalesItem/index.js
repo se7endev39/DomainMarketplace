@@ -5,11 +5,17 @@ import { useDispatch } from 'react-redux'
 import classnames from 'classnames'
 import { useState } from 'react'
 
-const SalesItem = ({name:domain, price:price_old}) => {
+const SalesItem = ({name:domain, price:price_old, status}) => {
   const dispatch = useDispatch()
+  
   const changePrice = () => {
     dispatch( salesActions.changePrice({ domain, price: price}) )
   }
+  
+  const setHold = (flag) => {
+    dispatch( salesActions.setHold({domain, status: flag ? "Hold" : "Taken"}) )
+  }
+
   const [price, setPrice] = useState(price_old)
   return (
     <div className={"mt-3 items-center flex justify-between " + styles.CartItem}>
@@ -21,6 +27,11 @@ const SalesItem = ({name:domain, price:price_old}) => {
         <div>
           <MDBBtn color="dark" onClick={changePrice}>
             Save
+          </MDBBtn>
+        </div>
+        <div>
+          <MDBBtn color="dark" onClick={() => setHold( status != "Hold" )}>
+            { status == "Hold" ? "Sell" : "Hold" }
           </MDBBtn>
         </div>
       </div>
