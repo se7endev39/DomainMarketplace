@@ -7,11 +7,11 @@ import { MDBIcon } from 'mdbreact'
 import Link from 'next/link'
 
 const sidebar_menu = [
-  {name:"Profile Settings", href:"/search"},
-  {name:"My Watchlist", href:"/search"},
-  {name:"Search domains", href:"/search"},
-  {name:"Transaction history", href:"/search"},
-  {name:"Credits", href:"/search"},
+  {name:"Profile Settings", href:"/search", icon: "times"},
+  {name:"My Watchlist", href:"/search", icon: "times"},
+  {name:"Search domains", href:"/search", icon: "times"},
+  {name:"Transaction history", href:"/search", icon: "times"},
+  {name:"Credits", href:"/search", icon: "times"},
 ]
 
 const Sidebar = (props, ref) => {
@@ -27,8 +27,11 @@ const Sidebar = (props, ref) => {
   return (
     <div className={classnames( styles.Sidebar, "h-full top-0 flex flex-col" , !opened? "hidden": "")}>
       {
-        sidebar_menu.map(({name, href}, index) => (
-          <div key={index} className="px-4 pt-3 text-lg font-bold cursor-pointer"  onClick={() => setOpened(false)}>
+        sidebar_menu.map(({name, href, icon}, index) => (
+          <div key={index} className="flex px-4 pt-3 text-lg font-bold cursor-pointer"  onClick={() => setOpened(false)}>
+            <div className="pr-3">
+              <MDBIcon icon={icon} className="text-xl"/>
+            </div>
             <Link href={href}>
               {name}
             </Link>

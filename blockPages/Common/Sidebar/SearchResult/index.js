@@ -6,10 +6,11 @@ import _ from 'lodash'
 import { useSelector } from 'react-redux'
 
 const db_fake = [
-  ".admin",
-  ".crypto",
-  ".media",
-  ".metrix",
+  "",
+  "admin",
+  "crypto",
+  "media",
+  "metrix",
 ]
 
 const SearchResult = ({query}) => {
