@@ -7,7 +7,7 @@ import { MDBIcon } from 'mdbreact'
 import Link from 'next/link'
 
 const sidebar_menu = [
-  {name:"Profile Settings", href:"/search", icon: "user-circle"},
+  {name:"Profile Settings", href:"/profile", icon: "user-circle"},
   {name:"My Watchlist", href:"/search", icon: "bars"},
   {name:"Search domains", href:"/search", icon: "search"},
   {name:"Transaction history", href:"/search", icon: "history"},
