@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 import { salesActions } from '_actions'
 import { useDispatch } from 'react-redux'
 import classnames from 'classnames'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const SalesItem = ({name:domain, price:price_old, status}) => {
   const dispatch = useDispatch()
@@ -17,6 +17,11 @@ const SalesItem = ({name:domain, price:price_old, status}) => {
   }
 
   const [price, setPrice] = useState(price_old)
+
+  useEffect(() => {
+    setPrice( price_old )
+  }, [price_old])
+
   return (
     <div className={"mt-3 items-center flex justify-between " + styles.CartItem}>
       <div className={styles.domain + " pl-3"}>{domain}</div>
