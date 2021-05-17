@@ -2,14 +2,14 @@ import Cart from 'models/cart'
 import Domain from 'models/domain'
 import connectDB from 'middleware/mongodb'
 
-const user = "609a02061a2bd8cc3f2e95a2"
 
 const handler = async (req, res) => {
+  const user = req.payload.id
   switch(req.method){
     case "PUT":
       {
         const { domain, price, status } = req.body;
-        const old_domain = await Domain.findOne({name: domain})
+        const old_domain = await Domain.findOne({name: domain, user})
         if ( !old_domain ){
           res.status(200).json({type: "fail"})
           return
@@ -21,14 +21,14 @@ const handler = async (req, res) => {
         break;
       }
     case "GET":
-      const sales_list = await Domain.find({}).lean()
+      const sales_list = await Domain.find({user}).lean()
       res.status(200).json(sales_list)
       break;
     case "DELETE":
       {
         const { domain } = req.query;
         console.log('delete', domain, 'from cart')
-        const result = await Cart.deleteOne({ domain })
+        const result = await Cart.deleteOne({ domain, user })
         console.log('response', result)
         res.status(200).json({type: "success"})
         break;
@@ -36,4 +36,4 @@ const handler = async (req, res) => {
   }
 }
 
-export default connectDB(handler)
+export default connectDB(handler, "auth")

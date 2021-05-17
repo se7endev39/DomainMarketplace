@@ -11,8 +11,7 @@ const Due = () => {
 
   const dispatch = useDispatch()
   const checkout = () => {
-    dispatch( cartActions.checkout() )    
-    router.push("/sales")
+    dispatch( cartActions.checkout( () => router.push("/sales") ) )    
   }
   return (
     <div className={classnames(styles.Due, "py-2 px-4 mt-4 pb-4 md:ml-8")}>

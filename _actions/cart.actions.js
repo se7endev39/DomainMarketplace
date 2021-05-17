@@ -32,7 +32,7 @@ const clear = () => async(dispatch) => {
   })
 }
 
-const checkout = () => async (dispatch) => {
+const checkout = ( callback ) => async (dispatch) => {
   const response = await axios.post("/api/cart/checkout")
   dispatch({
     type: types.checkout
@@ -41,6 +41,7 @@ const checkout = () => async (dispatch) => {
     dispatch(alertActions.success("Domains are purchased"))
   }
   get()(dispatch)
+  callback()
 }
 
 export const cartActions = {

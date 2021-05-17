@@ -10,7 +10,7 @@ const jwt = {
 
 const sign = async (data) => {
   console.log("token signing", data.email)
-  const token = await jwt.sign({email: data.email}, process.env.jwt_secret, {
+  const token = await jwt.sign({email: data.email, id: data._id}, process.env.jwt_secret, {
     expiresIn: process.env.expiresIn
   })
   return token

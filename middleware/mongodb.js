@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import jwt from './jwt'
 
-const connectDB = handler => async (req, res) => {
+const connectDB = (handler, auth) => async (req, res) => {
   if (mongoose.connections[0].readyState) {
     // Use current db connection
     const token = req.headers.authorization
@@ -16,6 +16,11 @@ const connectDB = handler => async (req, res) => {
         return
       }
       req.payload = data
+    }
+
+    if( auth && !req.payload){
+      res.status(200).json({type: "fail", message: "sign in first"})
+      return;
     }
     
     return handler(req, res);

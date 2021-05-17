@@ -19,6 +19,12 @@ function SignIn() {
     dispatch( authActions.signIn({email, password}) )
   }
 
+  const onKeyDown = (e) => {
+    if( e.key === "Enter" ){
+      signIn()
+    }
+  }
+
   useEffect(() => {
     console.log("signed", signed)
     signed && router.push("/")
@@ -36,7 +42,7 @@ function SignIn() {
         </div>
         <div className="pt-4">
           <div className="pb-1 text-md">Password</div>
-          <input type="password" className={classnames("pl-1 w-80", styles.input)} value={password} onChange={(e) => setPassword(e.target.value)}/>
+          <input type="password" className={classnames("pl-1 w-80", styles.input)} value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={onKeyDown}/>
         </div>
         <div className="text-center pt-4" onClick={signIn}>
           <MDBBtn color="primary">Sign in</MDBBtn>
