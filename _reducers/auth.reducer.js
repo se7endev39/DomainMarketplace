@@ -11,7 +11,6 @@ const initialState =
 export function auth(state = initialState, action) {
   switch (action.type) {
     case authActions.types.signUp:
-      return { ...action.payload.data, signed: true};
     case authActions.types.signIn:
       const { id, email } = jsonwebtoken.decode( action.payload.token )
       return { ...action.payload.data, email, id,  signed: true }

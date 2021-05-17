@@ -41,7 +41,7 @@ const Sidebar = (props, ref) => {
             <div  style={{width: "40px"}}>
               <MDBIcon icon={icon} className="text-xl"/>
             </div>
-            <Link href={signed && !sign_pages.includes(href)? href : "/auth/signin"}>
+            <Link href={signed || !sign_pages.includes(href)? href : "/auth/signin"}>
               {name}
             </Link>
           </div>
