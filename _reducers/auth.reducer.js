@@ -1,4 +1,5 @@
 import {authActions} from '_actions'
+import jsonwebtoken from 'jsonwebtoken'
 
 const initialState = 
 {
@@ -12,8 +13,9 @@ export function auth(state = initialState, action) {
     case authActions.types.signUp:
       return { ...action.payload.data, signed: true};
     case authActions.types.signIn:
-      return { ...action.payload.data, signed: true }
-    case authActions.types.singOut:
+      const { email } = jsonwebtoken.decode( action.payload.token )
+      return { ...action.payload.data, email, signed: true }
+    case authActions.types.signOut:
       return initialState
     default:
       return state;

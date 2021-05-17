@@ -1,8 +1,23 @@
 import mongoose from 'mongoose';
+import jwt from './jwt'
 
 const connectDB = handler => async (req, res) => {
   if (mongoose.connections[0].readyState) {
     // Use current db connection
+    const token = req.headers.authorization
+    if( token ){
+      const data = await jwt.verify( token )
+      console.log("decoded", data)
+      if( !data ){
+        res.status( 401 ).send({
+          type: "fail", 
+          message: "token invalid"
+        })
+        return
+      }
+      req.payload = data
+    }
+    
     return handler(req, res);
   }
   // Use new db connection

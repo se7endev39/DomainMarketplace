@@ -81,7 +81,7 @@ function HomePage() {
       <div className="py-4">
         <div className="flex justify-end pr-16">
           {
-            ["Home", "Domains", "Help", "About Us"].map((menu, i) =>(
+            ["Home", "Domains", "FAQ", "About Us"].map((menu, i) =>(
               <div key={i} className="px-4 text-md cursor-pointer">
                 {menu}
               </div>

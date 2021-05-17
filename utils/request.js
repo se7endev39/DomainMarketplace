@@ -29,7 +29,7 @@ const createHeaders = (additionalHeaders = {}) => {
 
   const token = getToken();
   if (token) {
-    headers.Authorization = `Bearer ${token}`;
+    headers.authorization = `Bearer ${token}`;
   }
 
   return headers;

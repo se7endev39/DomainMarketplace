@@ -69,6 +69,10 @@ body {
   // margin-bottom: 80px;
 }
 
+.btn{
+  font-family: monospace;
+}
+
 .btn.btn-dark{
   color: var(--color-btn-text);
   background-color: var(--color-btn-bg) !important;

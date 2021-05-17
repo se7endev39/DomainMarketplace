@@ -13,6 +13,9 @@ var user = new Schema({
     type: String,
     required: true
   },
+  token: {
+    type: String
+  },
   created_at: {
     type: Date,
     default: Date.now

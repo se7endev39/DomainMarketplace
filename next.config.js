@@ -5,6 +5,8 @@ module.exports =
   {
     env: {
       mongodburl: "mongodb://localhost/SAMarketplace",
+      jwt_secret: "$2jlCUJqSWdVtb$10$k1SY00nill.",
+      expiresIn: 7200
     }
   }
 // )

@@ -1,4 +1,5 @@
 export * from "./auth.actions";
+export * from "./profile.actions";
 export * from "./alert.actions";
 export * from "./cart.actions";
 export * from "./sales.actions"

@@ -9,20 +9,55 @@ import 'scss/colors.scss'
 import 'scss/_global.scss'
 import { store, wrapper } from "../utils/store";
 import Layout from "../components/layout";
-import { alertActions, citationActions, topicActions } from "../_actions";
+import { authActions, alertActions, citationActions, topicActions } from "../_actions";
 import { useDispatch, useSelector } from "react-redux";
 import Head from 'next/head';
+import axios from 'axios'
+import { useRouter } from 'next/router';
+
+axios.interceptors.request.use( request => {
+  const token = localStorage.getItem("token")
+  console.log("axios interceptor!")
+  if( token ){
+    request.headers.authorization = token
+  }
+  return request
+} )
+
+axios.interceptors.response.use( response => {
+  if(response.status == 401){
+    authActions.updateToken()
+  }
+  return response
+})
+
+const sign_pages = [
+  "profile",
+  "sales",  
+]
 
 const MyApp = (props) => {
   const { Component, pageProps, data } = props;
   const dispatch = useDispatch();
+  const router = useRouter()
+  const signed = useSelector(state => state.auth.signed)
 
   useEffect(() => {
     console.log("MyApp props", props)
-    dispatch(alertActions.clear());
+
+    // Check Signed In
+    dispatch( authActions.checkSign() )
+
+    dispatch( alertActions.clear() );
     // dispatch(citationActions.getFavoriteCitations());
     // dispatch(topicActions.getFavoriteTopics());
   }, [])
+
+  useEffect(() => {
+    const pageName = router.pathname.split("/").pop()
+    if(sign_pages.includes(pageName) && !signed)
+      router.push("/")
+  }, [router.pathname, signed])
 
   return (
     // <Provider store={store}>
