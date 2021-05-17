@@ -6,6 +6,7 @@ import { alertActions } from "../_actions";
 import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";
 import Sidebar from 'blockPages/Common/Sidebar';
+import styles from './layout.module.scss'
 
 function Layout(props) {
   const { children } = props
@@ -25,7 +26,7 @@ function Layout(props) {
 
 
   return (
-    <div className='flex flex-col h-screen'>
+    <div className={'flex flex-col h-screen ' + styles.layout}>
       <Header noSearch={!shouldHaveSearch} onSidebar={onSidebar}/>
       <Sidebar ref={sidebar_ref}/>
       {alert.message && <Alert alert={alert} />}

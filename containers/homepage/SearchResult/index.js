@@ -42,7 +42,7 @@ const SearchResult = ({query, result}) => {
         }  
       }
     ))
-  }, 150), [query, cart_list])
+  }, 150), [query, cart_list, result])
   return (
     <div className="pt-4 pb-4 px-4 flex flex-col lg:flex-row">
       <div className="flex-grow lg:mr-4">
