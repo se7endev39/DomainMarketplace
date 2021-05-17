@@ -22,7 +22,7 @@ const handler = async (req, res) => {
       }
     case "GET":
       const sales_list = await Domain.find({user}).lean()
-      res.status(200).json(sales_list)
+      res.status(200).json({type: "success", payload: sales_list })
       break;
     case "DELETE":
       {

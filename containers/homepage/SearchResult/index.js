@@ -38,7 +38,8 @@ const SearchResult = ({query, result}) => {
         return {
           domain,
           price,
-          status
+          status,
+          user: domain_db?.user
         }  
       }
     ))

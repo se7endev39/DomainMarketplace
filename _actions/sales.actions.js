@@ -8,10 +8,11 @@ const types = {
 }
 const get = () => async (dispatch) => {
   const response = await axios.get("/api/sales")
-  dispatch({
-    type: types.get,
-    payload: response.data
-  })
+  if( response.data.type == "success")
+    dispatch({
+      type: types.get,
+      payload: response.data.payload
+    })
 }
 
 const changePrice = ({domain, price}) => async (dispatch) => {

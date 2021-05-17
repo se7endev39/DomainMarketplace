@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useCallback } from "react";
+import React, { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {useRouter} from 'next/router'
 import Search from 'containers/homepage/Search'
@@ -72,17 +72,29 @@ const faqs = [
 
 function HomePage() {
   const router = useRouter()
+
+  const homepage = useRef()
+  const block1 = useRef()
+  const block2 = useRef()
+  const block3 = useRef()
+  const blocks = [block1, block2, block3]
+  const scroll2block = (i) => {
+    const offsetTop = 0;
+    if( i > 0)
+      blocks[i-1].current.scrollIntoView( {behavior: "smooth"} );
+  } 
+
   useEffect(() => {
     // router.push("/search?q=")
   }, [])
 
   return (
-    <div className={styles.homepage}>
+    <div className={styles.homepage} ref={homepage}>
       <div className="py-4">
         <div className="flex justify-end pr-16">
           {
             ["Home", "Domains", "FAQ", "About Us"].map((menu, i) =>(
-              <div key={i} className="px-4 text-md cursor-pointer">
+              <div key={i} className="px-4 text-md cursor-pointer" onClick={() => scroll2block(i)}>
                 {menu}
               </div>
             ))
@@ -110,7 +122,7 @@ function HomePage() {
         <div className={classnames(styles.background)}>
         </div>
       </div>
-      <div className={ classnames("py-8 px-12 text-center", styles.land2)}>
+      <div className={ classnames("py-8 px-12 text-center", styles.land2)} ref={block1}>
         <div className="px-20 text-4xl font-medium">
           Why Do I Need A Domain Name?
         </div>
@@ -132,7 +144,7 @@ function HomePage() {
         }
         </div>
       </div>
-      <div className={classnames("py-8 text-center", styles.divider, styles.land2)}>
+      <div className={classnames("py-8 text-center", styles.divider, styles.land2)} ref={block2}>
         <div className="text-4xl font-bold">
           Premium Domains Sale
         </div>
@@ -160,7 +172,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className={classnames("py-8 text-center", styles.divider, styles.land2)}>
+      <div className={classnames("py-8 text-center", styles.divider, styles.land2)} ref={block3}>
         <div className="text-4xl font-bold">
           FAQ
         </div>

@@ -56,7 +56,7 @@ const MyApp = (props) => {
   useEffect(() => {
     const pageName = router.pathname.split("/").pop()
     if(sign_pages.includes(pageName) && !signed)
-      router.push("/")
+      router.push("/auth/signin")
   }, [router.pathname, signed])
 
   return (

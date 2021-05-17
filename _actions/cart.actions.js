@@ -14,10 +14,11 @@ const add = (data) => async(dispatch) => {
 
 const get = () => async (dispatch) => {
   const response = await axios.get("/api/cart")
-  dispatch({
-    type: types.get,
-    payload: response.data
-  })
+  if( response.data.type == "success")
+    dispatch({
+      type: types.get,
+      payload: response.data.payload
+    })
 }
 
 const remove = (domain) => async(dispatch) => {

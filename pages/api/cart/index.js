@@ -17,7 +17,7 @@ const handler = async (req, res) => {
       const cart_list = await Cart.find({user}).lean()
       console.log("total price", cart_list.map(each => each.price).reduce((a,b) => a+b, 0))
       const total = cart_list.map(e => e.price).reduce((a,b) => a+b, 0);
-      res.status(200).json({total, cart: cart_list})
+      res.status(200).json({type: "success", payload: {total, cart: cart_list}})
       break;
     case "DELETE":
       {

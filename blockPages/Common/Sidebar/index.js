@@ -16,6 +16,12 @@ const sidebar_menu = [
   {name:"Credits", href:"/search", icon: "credit-card"},
 ]
 
+const sign_pages = [
+  "/profile",
+  "/sales",  
+]
+
+
 const Sidebar = (props, ref) => {
   const dispatch = useDispatch()
   const signed = useSelector(state => state.auth.signed)
@@ -35,7 +41,7 @@ const Sidebar = (props, ref) => {
             <div  style={{width: "40px"}}>
               <MDBIcon icon={icon} className="text-xl"/>
             </div>
-            <Link href={href}>
+            <Link href={signed && !sign_pages.includes(href)? href : "/auth/signin"}>
               {name}
             </Link>
           </div>
