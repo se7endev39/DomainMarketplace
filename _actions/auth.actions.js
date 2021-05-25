@@ -24,6 +24,7 @@ const signUp = ({email, password}) => async(dispatch) => {
 }
 
 const signIn = ({email, password}) => async (dispatch) => {
+  updateToken()
   const response = await axios.post("/api/auth/signin", {email, password})
   switch(response.data.type){
     case "success":
@@ -40,7 +41,10 @@ const signIn = ({email, password}) => async (dispatch) => {
 }
 
 const signOut = () => async (dispatch) => {
-  const response = await axios.post("/api/auth/signout")
+  try{
+    const response = await axios.post("/api/auth/signout")
+  }catch(e){
+  }
   dispatch({
     type: types.signOut,
   })
@@ -48,7 +52,12 @@ const signOut = () => async (dispatch) => {
 }
 
 const checkSign = () => async dispatch => {
-  const response = await axios.post("/api/auth/checksign")
+  let response;
+  try{
+    response = await axios.post("/api/auth/checksign")
+  }catch(e){
+    response = e.response
+  }
   switch(response.data.type){
     case "success":
       dispatch({

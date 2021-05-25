@@ -48,6 +48,7 @@ const db_fake = [
 
 const SearchResult = ({query, result}) => {
   const [results, setResults] = useState([]) 
+  const [suggests, setSuggests] = useState([]) 
   const cart_list = useSelector((state) => state.cart.cart);
 
   useEffect(_.debounce(() => {
@@ -55,8 +56,13 @@ const SearchResult = ({query, result}) => {
       setResults([])
       return
     }
-    setResults(
-      db_fake.map(ext => {
+    const tags_suggest = db_fake.slice(4, db_fake.length)
+      .map((a) => ({sort: Math.random(), value: a}))
+      .sort((a, b) => a.sort - b.sort)
+      .map((a) => a.value)
+      .slice(0, 2 + (Math.random() > 0.5))
+    const tags_fixed = db_fake.slice(0, 4)
+    const appendTag = ext => {
         const domain = query + ext
         const domain_db = result.find( each => each.name == domain )
         const cart = cart_list.find((item) => item.domain == domain)
@@ -75,7 +81,8 @@ const SearchResult = ({query, result}) => {
           user: domain_db?.user
         }  
       }
-    ))
+    setResults( tags_fixed.map(appendTag) )
+    setSuggests( tags_suggest.map(appendTag) )
   }, 150), [query, cart_list, result])
   return (
     <div className="pt-4 pb-4 px-4 flex flex-col lg:flex-row">
@@ -83,6 +90,14 @@ const SearchResult = ({query, result}) => {
       {
         results.map( (domain, index) => (
           <SearchItem key={index} {...domain}/>
+        ))
+      }
+      <div className="divider pt-4 font-bold text-lg">
+        Suggestions
+      </div>
+      {
+        suggests.map( (domain, index) => (
+          <SearchItem key={results.length + index} {...domain}/>
         ))
       }
       </div>
