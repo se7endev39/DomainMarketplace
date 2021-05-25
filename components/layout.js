@@ -13,8 +13,8 @@ function Layout(props) {
   const dispatch = useDispatch();
   const alert = useSelector((state) => state.alert);
   const sidebar_ref = useRef()
-  const onSidebar = () => {
-    sidebar_ref.current.openSidebar()
+  const onSidebar = (e) => {
+    sidebar_ref.current.openSidebar(e)
   }
 
   const componentName = _.get(children, [1, 'type', 'name'])

@@ -26,20 +26,20 @@ const images = [
 
 const premiums = [
   {
-    domain: "appleadmin",
-    price: 50000
+    domain: "Million.wealth",
+    price: 49999
   },
   {
-    domain: "applemedia",
-    price: 28000
+    domain: "hospital.safe",
+    price: 1855
   },
   {
-    domain: "applemetrix",
-    price: 40000
+    domain: "Qicket.lock",
+    price: 4800
   },
   {
-    domain: "applecrypto",
-    price: 6000
+    domain: "Wonderford.box",
+    price: 1250
   },
 ]
 
