@@ -26,19 +26,19 @@ const images = [
 
 const premiums = [
   {
-    domain: "Million.wealth",
+    domain: "Millionwealth",
     price: 49999
   },
   {
-    domain: "hospital.safe",
+    domain: "hospitalsafe",
     price: 1855
   },
   {
-    domain: "Qicket.lock",
+    domain: "Qicketlock",
     price: 4800
   },
   {
-    domain: "Wonderford.box",
+    domain: "Wonderfordbox",
     price: 1250
   },
 ]
