@@ -41,7 +41,7 @@ const Sidebar = (props, ref) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!ref_sidebar.current.contains(event.target)) {
-        setOpened( !opened )
+        setOpened( false )
       }
     }
     window.addEventListener('click', handleClickOutside);
