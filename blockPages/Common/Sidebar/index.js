@@ -40,7 +40,7 @@ const Sidebar = (props, ref) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!ref_sidebar.current.contains(event.target)) {
+      if (opened && !ref_sidebar.current.contains(event.target)) {
         setOpened( false )
       }
     }
