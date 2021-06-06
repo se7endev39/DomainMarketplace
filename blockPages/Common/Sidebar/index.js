@@ -14,6 +14,7 @@ const sidebar_menu = [
   {name:"My Watchlist", href:"/search", icon: "bars"},
   {name:"Transaction history", href:"/search", icon: "history"},
   {name:"Credits", href:"/search", icon: "credit-card"},
+  {name:"Mapping Table", href:"/mapping-table", icon: "table"},
 ]
 
 const sign_pages = [
