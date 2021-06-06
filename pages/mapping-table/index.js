@@ -6,8 +6,6 @@ import classNames from 'classnames'
 import styled from 'styled-components'
 import { useTable } from 'react-table'
 
-import makeData from './makeData'
-
 const Styles = styled.div`
   padding-top: 1rem;
 
