@@ -53,8 +53,8 @@ const faqs = [
     answer: "Yes. The domain is stored in your cryptocurrency wallet and can be transferred by you after you claim the name on the blockchain with your wallet."
   },
   {
-    question: "Does Unstoppable Domains provide you with a wallet?",
-    answer: "Yes. The domain is stored in your cryptocurrency wallet and can be transferred by you after you claim the name on the blockchain with your wallet."
+    question: "Are blockchain domains part of ICANN / traditional DNS?",
+    answer: "No. Blockchain domains are what’s called alternate roots. They are not part of the current DNS."
   },
   {
     question: "How will I be able to view a blockchain website?",
