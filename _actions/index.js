@@ -7,3 +7,4 @@ export * from "./user.actions";
 export * from "./search.actions";
 export * from "./citation.actions";
 export * from "./topic.actions";
+export * from "./mapping.actions";

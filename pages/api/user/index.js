@@ -25,6 +25,7 @@ const handler = async (req, res) => {
         res.status(422).send('data_incomplete');
       }
   } else {
+
     res.status(422).send('req_method_not_supported');
   }
 };

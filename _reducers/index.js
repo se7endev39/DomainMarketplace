@@ -8,6 +8,7 @@ import { topic } from "./topic.reducer";
 import { citation } from "./citation.reducer";
 import { cart } from './cart.reducer'
 import { sales } from './sales.reducer'
+import { mapping } from './mapping.reducer'
 
 const rootReducer = combineReducers({
   auth,
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   search,
   topic,
   citation,
+  mapping,
 });
 
 export default rootReducer;

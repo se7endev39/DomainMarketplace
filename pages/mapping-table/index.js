@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from './index.module.scss'
-import { salesActions } from '_actions'
+import { mappingActions, salesActions } from '_actions'
 import { useDispatch, useSelector } from 'react-redux'
 import classNames from 'classnames'
 import styled from 'styled-components'
@@ -95,20 +95,32 @@ function MappingTable() {
     () => [
       {
         Header: 'User Name',
-        accessor: 'User Name',
+        accessor: 'email',
       },
       {
         Header: 'Short Address',
-        accessor: 'Short Address',
+        accessor: 'address',
       },
       {
         Header: 'MRX Address',
-        accessor: 'MRX Address',
+        accessor: 'matrix',
       },
     ],
     []
   )
 
+  
+  const domains = useSelector( state => state.mapping.domains)
+  const dispatch = useDispatch();
+  useEffect( () => {
+    dispatch( mappingActions.get() );
+  }, [])
+
+  const data = domains.map( (each, i) => ({
+    email: each.user.email,
+    address: each.name,
+    matrix: `MHjjCBTa55DKWgVpNQdE2nBoYnSGYtXdu${i+4}`
+  }))
   
   return (
     <div className={classNames("px-4 pt-8", styles.Sales)}>
