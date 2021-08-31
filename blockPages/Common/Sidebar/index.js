@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
+import { forwardRef, useEffect, useImperativeHandle, useState, useRef } from 'react'
 import styles from './index.module.scss'
 import _ from 'lodash'
 import { useDispatch, useSelector } from 'react-redux'
@@ -14,6 +14,7 @@ const sidebar_menu = [
   {name:"My Watchlist", href:"/search", icon: "bars"},
   {name:"Transaction history", href:"/search", icon: "history"},
   {name:"Credits", href:"/search", icon: "credit-card"},
+  {name:"Mapping Table", href:"/mapping-table", icon: "table"},
 ]
 
 const sign_pages = [
@@ -26,15 +27,31 @@ const Sidebar = (props, ref) => {
   const dispatch = useDispatch()
   const signed = useSelector(state => state.auth.signed)
   const [ opened, setOpened ] = useState(false)
+  const ref_sidebar = useRef()
 
   useImperativeHandle(ref, () => ({
-    openSidebar: () => {
-      setOpened(true)
+    openSidebar: (e) => {
+      e.preventDefault();
+      setOpened(!opened)
+      if(!opened){
+        ref_sidebar.current.focus()
+      }
     }
   }));
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (opened && !ref_sidebar.current.contains(event.target)) {
+        setOpened( false )
+      }
+    }
+    window.addEventListener('click', handleClickOutside);
+    return () => window.removeEventListener('click', handleClickOutside);
+  }, [opened])
+
+
   return (
-    <div className={classnames( styles.Sidebar, "h-full top-0 flex flex-col" , !opened? "hidden": "")}>
+    <div className={classnames( styles.Sidebar, "h-full top-0 flex flex-col" , !opened? "hidden": "")} onBlur={() => setOpened(false)} ref={ref_sidebar}>
       {
         sidebar_menu.map(({name, href, icon}, index) => (
           <div key={index} className="flex px-4 pt-3 text-lg font-bold cursor-pointer"  onClick={() => setOpened(false)}>

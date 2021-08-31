@@ -1,11 +1,6 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-    // defaultLineHeights: true,
-    // standardFontWeights: true
-  },
-  purge: [],
+  future: {},
+  purge: ['./pages/**/*.{js,jsx}', './components/**/*.{js,jsx}', './containers/**/*.{js,jsx}', './blockPages/**/*.{js,jsx}'],
   theme: {
     extend: {},
     screens: {
