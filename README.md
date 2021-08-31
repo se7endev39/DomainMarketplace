@@ -1,17 +1,15 @@
+Domain Marketplace
+==============
+Next.js - MongoDB webapp
 
-# stxtch Frontend
+## install
 Firstly, install mongodb and yarn to start this project
 
 Then to install node_module dependencies
 ```bash
 yarn
 ```
-
-To start mongodb
-make "c:\mongo_db" folder
-```bash
-yarn db-start
-```
+install mongodb as a service
 
 To start dev
 ```bash
