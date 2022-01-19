@@ -1,18 +1,24 @@
 # React Development Experience
 Let me briefly about my experience and the technologies that I have.
 I have 8 years of experience in software development.
-As a full-stack developer, I have developed websites, desktop applications, and hybrid mobile apps in many languages and stacks such as C/C#, Python, and JavaScript. 
+As a full-stack developer, I have developed websites, desktop applications, and hybrid mobile apps in many languages and
+stacks such as C/C#, Python, and JavaScript. 
 And recently I was very interested in Blockchain technologies. 
-So I have worked on some projects and developed some smart contracts, and built apps like blockchain-based websites and clients apps using React, web3JS, and NodeJS.
-But most of the time, I have focused on web development and for the last 5 years, the main stack was the MERN stack which is based on JavaScript or TypeScript. Especially I prefer front-end development. 
+So I have worked on some projects and developed some smart contracts, and built apps like blockchain-based websites and 
+clients apps using React, web3JS, and NodeJS.
+But most of the time, I have focused on web development and for the last 5 years, the main stack was the MERN stack which is based on 
+JavaScript or TypeScript. Especially I prefer front-end development. 
 And also I have experienced Django and Flask as python web frameworks.
-It's interesting and funnier than other fields. As the JS front-end frameworks, actually, not only React but also experienced Angular and Vue.js and am a little interested in Vue.js, but not in Angular.js so well.
+It's interesting and funnier than other fields. As the JS front-end frameworks, actually, not only React but also experienced Angular
+and Vue.js and am a little interested in Vue.js, but not in Angular.js so well.
 Talking about React, I have built many websites so far, even mobile apps using React Native. 
 I have started it since it came out to the world. 
 As you know, it's the most popular frontend framework which's used for handling user interfaces. 
-In developing, I preferably use function-based components and hook, and in API integration, I am available for both Restful API and Graphql API integration using libraries like Axios or react-apollo. 
+In developing, I preferably use function-based components and hook, and in API integration, I am available for both Restful API 
+and Graphql API integration using libraries like Axios or react-apollo. 
 Also available for both Saga and Thunk in React-Redux. 
-I mainly use SASS as a CSS preprocessor and can build pixel-perfect and browser-compatible UI as the design of Figma, Adobe, Invision. Also, I am well-versed in not only SPA development using pure React, but also SSR React frameworks such as Next and Gatsby.js.
+I mainly use SASS as a CSS preprocessor and can build pixel-perfect and browser-compatible UI as the design of Figma, Adobe, Invision. 
+Also, I am well-versed in not only SPA development using pure React, but also SSR React frameworks such as Next and Gatsby.js.
 I know you are finding React developers, so I have mainly said my experience on frontend development using React.
 I can say that I have really solid practical experience in frontend development using React.
 
@@ -20,12 +26,23 @@ I can say that I have really solid practical experience in frontend development 
 I have 8 years of experience in software engineering.
 As a full-stack developer, I have developed websites, mobile apps, desktop applications in many languages and stacks such as React, Angular, Vue, Node, C#, Python.
 Especially, I have met the MERN stack about 5 years ago and it attracted me. 
-Talking about React.js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. It’s used for handling the view layer for web and mobile apps. React also allows us to create reusable UI components. React allows developers to create large web applications that can change data, without reloading the page. The main purpose of React is to be fast, scalable, and simple. It works only on user interfaces in the application.
-I have experienced all modern technologies in React, from class basis component to function basis component, hook, react-redux, Restful and Graphql API integration, React SSR frameworks such as Next.js and Gatsby.js.
-And, For the Backend side in the MERN stack, Node.js and Express.js are used as a language and the backend framework, and MongoDB is used as a database. Of course, I can combine other databases not only MongoDB but also MySQL and PostgreSQL as the client’s requirement.
-Node.js is a cross-platform runtime environment, built on V8, a high-performance open-source JavaScript engine. Node.js is designed to build scalable network applications using JavaScript. It is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It is suitable for real-time web apps, streaming apps, messaging and chatting apps, social apps, and API development.
-And Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile application APIs. It is a modular web framework and is used for the easier creation of web applications and services. Express.js simplifies development and makes it easier to write secure, modular, and fast applications.
-And MongoDB is a document-oriented database, not based on the table-like relational database structure but provides an altogether different mechanism for storage and retrieval of data, that’s why known as a NoSQL database. Here, the term ‘NoSQL’ means ‘non-relational.
+Talking about React.js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. 
+It’s used for handling the view layer for web and mobile apps. React also allows us to create reusable UI components. 
+React allows developers to create large web applications that can change data, without reloading the page. 
+The main purpose of React is to be fast, scalable, and simple. It works only on user interfaces in the application.
+I have experienced all modern technologies in React, from class basis component to function basis component, 
+hook, react-redux, Restful and Graphql API integration, React SSR frameworks such as Next.js and Gatsby.js.
+And, For the Backend side in the MERN stack, Node.js and Express.js are used as a language and the backend framework, 
+and MongoDB is used as a database. Of course, I can combine other databases not only MongoDB but also MySQL and PostgreSQL as the client’s requirement.
+Node.js is a cross-platform runtime environment, built on V8, a high-performance open-source JavaScript engine.
+Node.js is designed to build scalable network applications using JavaScript. It is primarily used for non-blocking, 
+event-driven servers, due to its single-threaded nature. It is suitable for real-time web apps, streaming apps, 
+messaging and chatting apps, social apps, and API development.
+And Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile application APIs.
+It is a modular web framework and is used for the easier creation of web applications and services. 
+Express.js simplifies development and makes it easier to write secure, modular, and fast applications.
+And MongoDB is a document-oriented database, not based on the table-like relational database structure 
+but provides an altogether different mechanism for storage and retrieval of data, that’s why known as a NoSQL database. Here, the term ‘NoSQL’ means ‘non-relational.
 
 # Briefly describe your preferred way of letting back-end work with front-end
 At first I design protocol(API) between Backend and Frontend. I prefer Restful API or Graphql API integration between Backend and Frontend. Then I make APIs as the design and complete the controllers which will handle requests. Then I work in Frontend to integrate with the API.
