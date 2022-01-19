@@ -1,4 +1,123 @@
-409578003
+# React Development Experience
+Let me briefly about my experience and the technologies that I have.
+I have 8 years of experience in software development.
+As a full-stack developer, I have developed websites, desktop applications, and hybrid mobile apps in many languages and stacks such as C/C#, Python, and JavaScript. 
+And recently I was very interested in Blockchain technologies. 
+So I have worked on some projects and developed some smart contracts, and built apps like blockchain-based websites and clients apps using React, web3JS, and NodeJS.
+But most of the time, I have focused on web development and for the last 5 years, the main stack was the MERN stack which is based on JavaScript or TypeScript. Especially I prefer front-end development. 
+And also I have experienced Django and Flask as python web frameworks.
+It's interesting and funnier than other fields. As the JS front-end frameworks, actually, not only React but also experienced Angular and Vue.js and am a little interested in Vue.js, but not in Angular.js so well.
+Talking about React, I have built many websites so far, even mobile apps using React Native. 
+I have started it since it came out to the world. 
+As you know, it's the most popular frontend framework which's used for handling user interfaces. 
+In developing, I preferably use function-based components and hook, and in API integration, I am available for both Restful API and Graphql API integration using libraries like Axios or react-apollo. 
+Also available for both Saga and Thunk in React-Redux. 
+I mainly use SASS as a CSS preprocessor and can build pixel-perfect and browser-compatible UI as the design of Figma, Adobe, Invision. Also, I am well-versed in not only SPA development using pure React, but also SSR React frameworks such as Next and Gatsby.js.
+I know you are finding React developers, so I have mainly said my experience on frontend development using React.
+I can say that I have really solid practical experience in frontend development using React.
+
+# What’s your experience in MERN stack development?
+I have 8 years of experience in software engineering.
+As a full-stack developer, I have developed websites, mobile apps, desktop applications in many languages and stacks such as React, Angular, Vue, Node, C#, Python.
+Especially, I have met the MERN stack about 5 years ago and it attracted me. 
+Talking about React.js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. It’s used for handling the view layer for web and mobile apps. React also allows us to create reusable UI components. React allows developers to create large web applications that can change data, without reloading the page. The main purpose of React is to be fast, scalable, and simple. It works only on user interfaces in the application.
+I have experienced all modern technologies in React, from class basis component to function basis component, hook, react-redux, Restful and Graphql API integration, React SSR frameworks such as Next.js and Gatsby.js.
+And, For the Backend side in the MERN stack, Node.js and Express.js are used as a language and the backend framework, and MongoDB is used as a database. Of course, I can combine other databases not only MongoDB but also MySQL and PostgreSQL as the client’s requirement.
+Node.js is a cross-platform runtime environment, built on V8, a high-performance open-source JavaScript engine. Node.js is designed to build scalable network applications using JavaScript. It is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It is suitable for real-time web apps, streaming apps, messaging and chatting apps, social apps, and API development.
+And Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile application APIs. It is a modular web framework and is used for the easier creation of web applications and services. Express.js simplifies development and makes it easier to write secure, modular, and fast applications.
+And MongoDB is a document-oriented database, not based on the table-like relational database structure but provides an altogether different mechanism for storage and retrieval of data, that’s why known as a NoSQL database. Here, the term ‘NoSQL’ means ‘non-relational.
+
+# Briefly describe your preferred way of letting back-end work with front-end
+At first I design protocol(API) between Backend and Frontend. I prefer Restful API or Graphql API integration between Backend and Frontend. Then I make APIs as the design and complete the controllers which will handle requests. Then I work in Frontend to integrate with the API.
+Once it is Restful API, then I like to use axios or fetch to get data from the Backend. If it is Graphql API, then I use Apollo library.
+Briefly, I divide Backend and Frontend by API, then the Frontend works and get data by AJAX communication with the Backend. 
+
+# Briefly describe how your code is scalable and maintainable.
+At first, I keep things as simple as possible, so I make it easy to change, update, or add features later on.
+And I keep code clean and readable and create modular components with well-defined interfaces. So they are easier to reuse in other projects and less time-consuming to modify down the line.
+
+# Briefly describe your testing methodology
+I prefer Agile methodology. Software testing methodologies based on the Agile approach usually consist of a sequence of short iterations called sprints.
+They are conducted by small working groups that take into account new testing requirements. Each sprint includes stages such as planning, requirements analysis, and testing. Experts use the Agile approach to reduce risks because with each new iteration a team can take into account the experience of the previous one.
+For example, if you understand that some part of the product contained more bugs than predicted. During the next iteration, you can devote more time to this part of the product and test it more thoroughly.
+Scrum is also another one methodology and it is a part of the Agile methodology and is also based on sprints.
+Each sprint in Scrum ends with a review meeting where team members discuss progress and plan future testing sprints.
+
+# Briefly describe the stack you are most familiar with
+I am very familiar with MERN stack because I have experienced it about 5 years. As you know, MERN stack stands for MongoDB, Express, React, Node, after 4 key technologies that make up the stack.
+Express and Node make up the middle tier. Node.js is the popular and powerful JS server platform and Express.js is a server-side web framework based on Node.js.
+The MERN architecture allows to easily construct a 3-tier architecture(frontend, backend, database). Of course, in database tier, we can combine other databases like MySQL or PostgreSQL.
+React.js is the most popular and powerful frontend framework now. It lets us build up complex interfaces through simple components, connect them to data on your backend server, and render them  as HTML. Its strong suit is handling stateful, data-driven interfaces with minimal code and minimal pain, and it has all the bells and whistles you’d expect from a modern web frameworks such as great support for forms, error handling, events, lists and more.
+The next level down is the Express.js server-side framework, running inside a Node.js server. Express.js bills itself as a “fast, unopinionated, minimalist web framework for Node.js,” and that is indeed exactly what it is. Express.js has powerful models for URL routing (matching an incoming URL with a server function), and handling HTTP requests and responses.
+By making XML HTTP Requests (XHRs) or GETs or POSTs from your React.js front-end, you can connect to Express.js functions that power your application. Those functions in turn use MongoDB’s Node.js drivers, either via callbacks for using Promises, to access and update data in your MongoDB database.
+If your application stores any data (user profiles, content, comments, uploads, events, etc.), then you’re going to want a database that’s just as easy to work with as React, Express, and Node.
+That’s where MongoDB comes in: JSON documents created in your React.js front end can be sent to the Express.js server, where they can be processed and (assuming they’re valid) stored directly in MongoDB for later retrieval. 
+
+# Where are you employed right now? Why are you looking to change your job? If you already left, why?
+My last project was finished last June and they wanted me to learn PHP for new projects. But I don't have much experience in PHP and I didn't want to do it. So I am free till new order came to me from the company, and I am looking for a new job that matches my skills like MERN, Django, Smart Contract, etc.
+
+# Which tech developments excite you right now? Any interesting frameworks or new standard you have come across that peek your interest?
+In web development, I absolutely prefer MERN stack. Talking about other frameworks, I like Django, python framework. Python is strong, and it offers powerful combination with other strong functions like AI, Image Processing, etc. And in frontend frameworks, I am a bit interested in Vue.js. Vue.js is light, and it is suitable to build UIs progressively. But I think React is still stronger than others.
+As another tech, I am interested in Blockchain tech. I have already experienced of it a lot, but it is still attractive for me.
+
+
+
+
+# Experience in E-commerce using blockchain technology (PixelByPixel)
+There are many solutions for e-commerce using blockchain technology.
+First, you can use third-party services such as bitpay, coinbase, finance pay, etc.
+Or you can build a unique payment solution that uses cryptocurrency for the e-commerce service.
+Otherwise, you can create your own token and use it as a notional accounting value.
+When I worked in PixelByPixel team, our team built the Baggl e-commerce site and used the last solution.
+The client wanted to use the token as a notional accounting value and hoped it works as an advertisement, too.
+I built the ERC20 token and main smart contract in Solidity and deployed it on Binance Smart Chain.
+
+# Lema Finance
+https://lemma.finance
+Lemma finance is cryptocurrency trading platform.
+Especially, this platform is using 2 layers.
+One is for ethereum mainnet and another is for xdai network.
+So users deposit their funds on layer1 and then the funds are tokenized.
+Then users can get reward from layer2 as a governance token.
+So I had to deploy smart contracts on both of 2 layers.
+These smart contracts are interacted through amb bridge contract xdai provides.
+The tokens are transferred to amb bridge contract and amb bridge creates meta transaction and send the transactions to the layer2's bridge contract.
+And then the layer2’s bridge contract convert the meta transactions and mint the governance tokens to the users.
+Because of using 2 layers, gas estimation is very important.
+These smart contracts are developed by solidity and hardhat framework.
+Resolved a lot of complex problems including reward distribution, gas estimation, and etc.
+Currently, this platform is used by several thousands
+
+Basically I am a fullstack developer.
+No worries.
+I can serve full-time for you because my current project is finished it and I have full time for you.
+
+I would like to use video  usually I don't use camera so I didin't prepare the camera.
+
+I have rich experiences dealing with blockchain and other parts especially swap, defi part, dapp,
+NFT minting site and NFt marketplace development on multichain containing Ethereum, 
+BSC, Solana and Polygon.
+first i would like to hear from you about the project more details and I wanna suggest my suggestion.
+
+
+A unfortunately. Are the most are most projects were are security projects, so they use their own companies lab. Operator website. 
+I have 8 years of experience in software engineering.
+As a full-stack developer, I developed websites, mobile apps, desktop applications in many languages and stacks such as React, Node, Java, Python, etc before I became a blockchain developer.
+About 3 years ago, I started to work in blockchain technology and experienced it as I was working on some projects.
+I have experienced in developing smart contracts in Vyper and Solidity and building DApps using Web3 libraries including Web3.js, ethers.js, and Web3.py.
+I can work with Ethereum and the other Layer 2 blockchains including Polygon, Optimism, and Arbitrum.
+I have experience in ERC20, ERC1155, ERC721 token development, and interact with DEX protocols including UniswapV2, V3, Curve, Balancer, Sushiswap, and PancakeSwap.
+I used Brownie, Hardhat, Truffle frameworks for smart contract development, deployment, and uint testing but sometimes I used Remix IDE.
+And also experienced in using Openzeppelin libraries and the other libraries from Synthetix, Uniswap, Token price feed from Chainlink, etc.
+When I worked on a project, I implemented a 2 layer model and L1 was Ethereum mainnet and L2 was Polygon network.
+In the project, I had to use meta transaction so I used biconomy.io to interact between the 2 layers.
+In the Cryptocurrency field, security is very important because the projects manage millions or billions of funds.
+I analyzed some exploits using the flash loan attack and the reentrancy attack and I know how to prevent the attacks well.
+I often test smart contracts on the Ganache environment that forked from mainnet but sometimes work on testnets such as Kovan and Rinkeby.
+Additionally, I have knowledge in Polkadot blockchain using Rust/Substrate and polkadot.js.
+Some projects that I worked on are live and they are as follows.
+
+
 
 https://meet.google.com/hae-fias-ndo
 Uladzislau Laposhka
